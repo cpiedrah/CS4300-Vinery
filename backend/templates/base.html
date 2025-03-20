@@ -15,7 +15,7 @@
             </div>
             <div class="input-box" onclick="sendFocus()">
                 <img src="{{ url_for('static', filename='images/mag.png') }}" />
-                <input placeholder="Search for a Keeping up with the Kardashians episode" id="filter-text-val" onkeyup="filterText()">
+                <input placeholder="Search for a Wine" id="filter-text-val" onkeyup="filterText()">
             </div>
         </div>
         <div id="answer-box">
@@ -24,32 +24,40 @@
     </div>
 
     <script>
-
-        function answerBoxTemplate(title,titleDesc,rating){
-            return `<div class=''>
-                <h3 class='episode-title'>${title}</h3>
-                <p class='episode-desc'>${titleDesc}</p>
-                <p class='episode-rating'>IMDB Rating: ${rating}</p>
-            </div>`
+// Template function to display each wine review entry.
+    function wineTemplate(name, review, rating, veriety) {
+        return `<div class="wine-entry">
+                    <h3 class="wine-name">${name}</h3>
+                    <p class="wine-review">${review}</p>
+                    <p class="wine-rating">Rating: ${rating}</p>
+                    ${veriety ? `<p class="wine-variety">Variety: ${veriety}</p>` : ''}
+                </div>`;
         }
 
         function sendFocus(){
-            document.getElementById('filter-text-val').focus()
+        document.getElementById('filter-text-val').focus();
         }
 
         function filterText(){
-            document.getElementById("answer-box").innerHTML = ""
-            console.log(document.getElementById("filter-text-val").value)
-            fetch("/episodes?" + new URLSearchParams({ title: document.getElementById("filter-text-val").value }).toString())
-            .then((response) => response.json())
-            .then((data) => data.forEach(row => {
-                
-                let tempDiv = document.createElement("div")
-                tempDiv.innerHTML = answerBoxTemplate(row.title,row.descr,row.imdb_rating)
-                document.getElementById("answer-box").appendChild(tempDiv)
-            }));
-
-        }
-            
+        document.getElementById("answer-box").innerHTML = "";
+        const query = document.getElementById("filter-text-val").value;
+        console.log(query);
+        fetch("/search?" + new URLSearchParams({ query: query }).toString())
+            .then(response => response.json())
+            .then(data => {
+            data.forEach(row => {
+                let tempDiv = document.createElement("div");
+                tempDiv.innerHTML = wineTemplate(
+                row["Wine Name"],
+                row["Review"],
+                row["Rating"],
+                row["Veriety"]
+                );
+                document.getElementById("answer-box").appendChild(tempDiv);
+            });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+        } 
+        
     </script>
 </body>
