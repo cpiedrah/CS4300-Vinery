@@ -29,12 +29,13 @@
 
     <script>
         // Template function to display each wine review entry.
-        function wineTemplate(name, review, rating, veriety) {
+        function wineTemplate(name, review, rating, variety, similarity) {
             return `<div class="wine-entry">
                     <h3 class="wine-name">${name}</h3>
                     <p class="wine-review">${review}</p>
                     <p class="wine-rating">Rating: ${rating}</p>
-                    ${veriety ? `<p class="wine-variety">Variety: ${veriety}</p>` : ''}
+                    ${variety ? `<p class="wine-variety">Variety: ${variety}</p>` : ''}
+                    ${similarity ? `<p class="wine-similarity">Similarity Score: ${similarity}</p>` : ''}
                 </div>`;
         }
 
@@ -55,7 +56,8 @@
                             row["Wine Name"],
                             row["Review"],
                             row["Rating"],
-                            row["Veriety"]
+                            row["Variety"],
+                            row["Similarity"]
                         );
                         document.getElementById("answer-box").appendChild(tempDiv);
                     });

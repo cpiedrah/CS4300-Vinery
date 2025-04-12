@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import time
@@ -15,8 +14,8 @@ def get_reviews_from_list_page(url, max_pages=40):
     # Open the webpage
     driver.get(url)
 
-    # Wait for the page to load (you may need to adjust time based on page speed)
-    time.sleep(20)  # Wait for 3 seconds to ensure page is fully loaded
+    # Wait for the page to load
+    time.sleep(20)
 
     # Create an empty list to store reviews
     reviews = []
@@ -43,13 +42,9 @@ def get_reviews_from_list_page(url, max_pages=40):
 
         # Extract details for each wine entry
         for row in rows:
-            # current_page += 1
             try:
                 # Extract the wine name (inside <h3> in <span class="el nam"> within the <td class="name">)
                 wine_name = row.find_element(By.XPATH, ".//td[@class='name']//h3").text.strip()
-
-                # Extract the location (inside <span class="el loc">)
-                # location = row.find_element(By.XPATH, ".//td[@class='name']//span[@class='el loc']").text.strip()
 
                 # Extract the variety (inside <span class='el var'>)
                 variety = row.find_element(By.XPATH, ".//td[@class='name']//span[@class='el var']").text.strip()
@@ -71,12 +66,10 @@ def get_reviews_from_list_page(url, max_pages=40):
                     'Wine Name': wine_name,
                     'Review': review_text,
                     'Rating': rating,
-                    'Veriety': variety
+                    'Variety': variety
                 })
             except Exception as e:
                 print(f"Error processing a wine entry: {e}")
-
-            # Check if there is a "Next" button to move to the next page
         try:
             # Look for the "Next" button and click it
             
@@ -99,7 +92,7 @@ def get_reviews_from_list_page(url, max_pages=40):
 
     return reviews
 
-# URL of the CellarTracker list page you provided
+# URL of the CellarTracker list page
 url = 'https://www.cellartracker.com/list.asp?table=Notes&iUserOverride=0&T=1000#selected%3DW4820241_1_K203cfff5f42281a9e7d7f87aa40f9414'
 
 # Get reviews from the page, with a limit of 40 pages
