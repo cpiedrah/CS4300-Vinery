@@ -24,8 +24,8 @@ with open(json_file_path, 'r') as file:
     data = json.load(file)
     wines_df = pd.DataFrame(data)
     documents = [(x['Wine Name'], x['Variety'], x['Review'], x['Rating'])
-                 for x in data]
-    vectorizer = TfidfVectorizer(stop_words = 'english', max_df = .7, min_df = 75)
+                 for x in data if x['Review'] is not None and len(x['Review']) > 20]
+    vectorizer = TfidfVectorizer(stop_words = 'english', max_df = .7, min_df = 1)
     td_matrix = vectorizer.fit_transform([x[2] for x in documents if x[2] is not None])
     u, s, v_trans = svds(td_matrix, k=100)
 
@@ -42,6 +42,9 @@ with open(json_file_path, 'r') as file:
 
     docs_compressed_normed = normalize(docs_compressed)
 
+    # Get the unique varieties from the DataFrame without None values
+    unique_varieties = wines_df['Variety'].dropna().unique()
+
 app = Flask(__name__)
 CORS(app)
 
@@ -57,22 +60,67 @@ def closest_wines(wine_index_in, wine_repr_in, k = 5):
     asort = np.argsort(-sims)[:k+1]
     return [(documents[i][0], documents[i][1], documents[i][2], documents[i][3], sims[i]) for i in asort[1:]]
 
-def closest_wines_to_query(query_vec_in, k = 5):
+def closest_wines_to_query(query_vec_in, k = 5, variety_filter=None, year_filter=None):
     sims = docs_compressed_normed.dot(query_vec_in)
-    asort = np.argsort(-sims)[:k+1]
-    return [(documents[i][0], documents[i][1], documents[i][2], documents[i][3], sims[i]) for i in asort[1:]]
+    asort = np.argsort(-sims)
+    
+    # if both variety and year filter do not exist
+    if variety_filter is None and year_filter is None:
+        return [(documents[i][0], documents[i][1], documents[i][2], documents[i][3], sims[i]) for i in asort[1:]]
+    
+    added = 0
+    res = []
+    # if both variety and year filter exist
+    if variety_filter is not None and year_filter is not None:
+        for i in asort[1:]:
+            if documents[i][1] is not None and variety_filter.lower() in documents[i][1].lower() and str(year_filter) in documents[i][0]:
+                res.append((documents[i][0], documents[i][1], documents[i][2], documents[i][3], sims[i]))
+                added += 1
+                if added == k:
+                    break
+    # if only variety filter exists
+    if variety_filter is not None and year_filter is None:
+        for i in asort[1:]:
+            if documents[i][1] is not None and variety_filter.lower() in documents[i][1].lower():
+                res.append((documents[i][0], documents[i][1], documents[i][2], documents[i][3], sims[i]))
+                added += 1
+                if added == k:
+                    break
+    # if only year filter exists
+    if variety_filter is None and year_filter is not None:
+        for i in asort[1:]:
+            if documents[i][1] is not None and str(year_filter) in documents[i][0]:
+                res.append((documents[i][0], documents[i][1], documents[i][2], documents[i][3], sims[i]))
+                added += 1
+                if added == k:
+                    break
+    return res
 
 # Sample search using json with pandas
 def json_search(query):
+    variety_filter = None
+    year_filter = None
     if query:
         # Search is case-insensitive
         query_lower = query.lower()
+        # If the query contains any of the varieties in unique varieties
+        for variety in unique_varieties:
+            # Need to avoid matching substrings like "rice" in "licorice"
+            if f" {variety.lower()} " in query_lower:
+                variety_filter = variety
+                query_lower = query_lower.replace(variety.lower(), '')
+                print(f"Variety filter: {variety_filter}")
+        # If the query contains a year (4 digits)
+        for word in query_lower.split():
+            if len(word) == 4 and word.isdigit():
+                query_lower = query_lower.replace(word, '')
+                year_filter = word
         # Get tf-idf representation of the query
         query_tfidf = vectorizer.transform([query_lower]).toarray()
         # Normalize the query vector
         query_vec = normalize(np.dot(query_tfidf, words_compressed)).squeeze()
         # Find the closest wines to the query vector
-        matches = closest_wines_to_query(query_vec, k = 20)
+        matches = closest_wines_to_query(query_vec, k = 20, variety_filter=variety_filter, year_filter=year_filter)
         # Convert matches to DataFrame for easier manipulation
         matches = pd.DataFrame(matches, columns=['Wine Name', 'Variety', 'Review', 'Rating', 'Similarity'])
     else:
