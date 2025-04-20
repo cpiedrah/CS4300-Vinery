@@ -4,6 +4,7 @@ from flask import Flask, render_template, request
 from flask_cors import CORS
 from helpers.MySQLDatabaseHandler import MySQLDatabaseHandler
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction import text
 from sklearn.preprocessing import normalize
 from scipy.sparse.linalg import svds
 import pandas as pd
@@ -60,75 +61,150 @@ def closest_wines(wine_index_in, wine_repr_in, k = 5):
     asort = np.argsort(-sims)[:k+1]
     return [(documents[i][0], documents[i][1], documents[i][2], documents[i][3], sims[i]) for i in asort[1:]]
 
-def closest_wines_to_query(query_vec_in, k = 5, variety_filter=None, year_filter=None):
+def closest_wines_to_query(query_vec_in, k = 5, variety_filter=None, year_filter=None, color_filter=None):
     sims = docs_compressed_normed.dot(query_vec_in)
     asort = np.argsort(-sims)
     
+    ROSE_KEYWORDS = ['rosé', 'rose']
+    RED_KEYWORDS = [
+        'cabernet', 'merlot', 'pinot noir', 'syrah', 'zinfandel', 'tempranillo',
+        'grenache', 'nebbiolo', 'sangiovese', 'malbec', 'bordeaux', 'red'
+    ]
+    WHITE_KEYWORDS = [
+        'chardonnay', 'sauvignon', 'riesling', 'pinot gris', 'white', 'viognier',
+        'marsanne', 'roussanne', 'gewürztraminer', 'semillon', 'chenin blanc'
+    ]
+
+    def classify_color(variety, title, designation):
+        def field_to_str(field):
+            return field[0].lower() if isinstance(field, list) and field else field.lower() if isinstance(field, str) else ''
+    
+        v = field_to_str(variety)
+        t = field_to_str(title)
+        d = field_to_str(designation)
+
+        if any(keyword in v or keyword in t or keyword in d for keyword in ROSE_KEYWORDS):
+            return 'rosé'
+        if any(keyword in v or keyword in t or keyword in d for keyword in WHITE_KEYWORDS):
+            return 'white'
+        if any(keyword in v or keyword in t or keyword in d for keyword in RED_KEYWORDS):
+            return 'red'
+        return 'unknown'
     # if both variety and year filter do not exist
-    if variety_filter is None and year_filter is None:
-        return [(documents[i][0], documents[i][1], documents[i][2], documents[i][3], sims[i]) for i in asort[1:]]
+    # if variety_filter is None and year_filter is None:
+        # return [(documents[i][0], documents[i][1], documents[i][2], documents[i][3], sims[i]) for i in asort[1:]]
     
     added = 0
     res = []
-    # if both variety and year filter exist
-    if variety_filter is not None and year_filter is not None:
-        for i in asort[1:]:
-            if documents[i][1] is not None and variety_filter.lower() in documents[i][1].lower() and str(year_filter) in documents[i][0]:
-                res.append((documents[i][0], documents[i][1], documents[i][2], documents[i][3], sims[i]))
-                added += 1
-                if added == k:
-                    break
-    # if only variety filter exists
-    if variety_filter is not None and year_filter is None:
-        for i in asort[1:]:
-            if documents[i][1] is not None and variety_filter.lower() in documents[i][1].lower():
-                res.append((documents[i][0], documents[i][1], documents[i][2], documents[i][3], sims[i]))
-                added += 1
-                if added == k:
-                    break
-    # if only year filter exists
-    if variety_filter is None and year_filter is not None:
-        for i in asort[1:]:
-            if documents[i][1] is not None and str(year_filter) in documents[i][0]:
-                res.append((documents[i][0], documents[i][1], documents[i][2], documents[i][3], sims[i]))
-                added += 1
-                if added == k:
-                    break
+
+    for i in asort[1:]:
+        # Full metadata row
+        wine_data = data[i]
+
+        title, variety, review, rating = documents[i][:4]
+        designation = wine_data.get("designation", [""])[0] if isinstance(wine_data.get("designation"), list) else ""
+        # FILTERS
+        if variety_filter and (not variety or variety_filter.lower() not in variety.lower()):
+            continue
+        if year_filter and str(year_filter) not in title:
+            continue
+        if color_filter and classify_color(variety, title, designation) != color_filter:
+            continue
+
+        res.append((title, variety, review, rating, sims[i]))
+        added += 1
+        if added == k:
+            break
+
     return res
 
 # Sample search using json with pandas
 def json_search(query):
     variety_filter = None
     year_filter = None
+
+    color_filter = None
+
     if query:
         # Search is case-insensitive
         query_lower = query.lower()
-        # If the query contains any of the varieties in unique varieties
+
+        if 'red wine' in query_lower:
+            color_filter = 'red'
+            query_lower = query_lower.replace('red wine', '')
+        elif 'white wine' in query_lower:
+            color_filter = 'white'
+            query_lower = query_lower.replace('white wine', '')
+        elif 'rosé' in query_lower or 'rose' in query_lower:
+            color_filter = 'rosé'
+            query_lower = query_lower.replace('rosé', '').replace('rose', '')
+
+        VARIETY_COLOR_MAP = {
+        'chardonnay': 'white',
+        'sauvignon blanc': 'white',
+        'riesling': 'white',
+        'pinot gris': 'white',
+        'viognier': 'white',
+        'marsanne': 'white',
+        'roussanne': 'white',
+        'gewürztraminer': 'white',
+        'semillon': 'white',
+        'chenin blanc': 'white',
+        'cabernet sauvignon': 'red',
+        'merlot': 'red',
+        'pinot noir': 'red',
+        'syrah': 'red',
+        'zinfandel': 'red',
+        'tempranillo': 'red',
+        'grenache': 'red',
+        'nebbiolo': 'red',
+        'sangiovese': 'red',
+        'malbec': 'red'
+    }
+        # infer color of wine from wine name
+        for variety_name, color in VARIETY_COLOR_MAP.items():
+            if variety_name in query_lower:
+                color_filter = color
+                break
+            # If the query contains any of the varieties in unique varieties
         for variety in unique_varieties:
-            # Need to avoid matching substrings like "rice" in "licorice"
-            if f" {variety.lower()} " in query_lower:
+            if variety.lower() in query_lower:
                 variety_filter = variety
                 query_lower = query_lower.replace(variety.lower(), '')
-                print(f"Variety filter: {variety_filter}")
-        # If the query contains a year (4 digits)
+                break  # Stop at first match
+            # If the query contains a year (4 digits)
         for word in query_lower.split():
             if len(word) == 4 and word.isdigit():
                 query_lower = query_lower.replace(word, '')
                 year_filter = word
-        # Get tf-idf representation of the query
+            # Get tf-idf representation of the query
         query_tfidf = vectorizer.transform([query_lower]).toarray()
-        # Normalize the query vector
+            # Normalize the query vector
         query_vec = normalize(np.dot(query_tfidf, words_compressed)).squeeze()
-        # Find the closest wines to the query vector
+            # Find the closest wines to the query vector
         matches = closest_wines_to_query(query_vec, k = 20, variety_filter=variety_filter, year_filter=year_filter)
         # Convert matches to DataFrame for easier manipulation
-        matches = pd.DataFrame(matches, columns=['Wine Name', 'Variety', 'Review', 'Rating', 'Similarity'])
+
+        # matches = pd.DataFrame(matches, columns=['Wine Name', 'Variety', 'Review', 'Rating', 'Similarity'])
+        matches = closest_wines_to_query(
+        query_vec,
+        k=20,
+        variety_filter=variety_filter,
+        year_filter=year_filter,
+        color_filter=color_filter,
+        )
     else:
-        # If no query, return all wines with no similarity score
-        matches = wines_df
+        matches = wines_df.copy()
         matches['Similarity'] = None
+
+        columns_to_use = ['Wine Name', 'Review', 'Rating', 'Variety']
+        columns_present = [col for col in columns_to_use if col in matches.columns]
+        matches = matches[columns_present]
     
+    matches = pd.DataFrame(matches, columns=['Wine Name', 'Variety', 'Review', 'Rating', 'Similarity'])
     matches_filtered = matches[['Wine Name', 'Review', 'Rating', 'Variety', 'Similarity']]
+
+    
     return matches_filtered.to_json(orient='records')
 
 @app.route("/")
