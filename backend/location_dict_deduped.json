@@ -1,0 +1,2176 @@
+{
+  "France": [
+    "Coteaux Bourguignons",
+    "Loire Valley",
+    "Mazoy\u00e8res-Chambertin Grand Cru",
+    "Griotte-Chambertin Grand Cru",
+    "Lalande de Pomerol",
+    "Alpilles",
+    "Montagne-St. \u00c9milion",
+    "Alsace Grand Cru",
+    "Languedoc Roussillon",
+    "C\u00f4te de Nuits",
+    "Sainte Foy Bordeaux",
+    "Bordeaux",
+    "Clos St. Denis Grand Cru",
+    "Ard\u00e8che",
+    "Roussillon",
+    "Southwest France",
+    "Barsac",
+    "Anjou",
+    "Costi\u00e8res-de-N\u00eemes",
+    "Jura",
+    "Northern Rh\u00f4ne",
+    "Chambertin Grand Cru",
+    "Fronsac",
+    "Mazis-Chambertin Grand Cru",
+    "C\u00f4tes de Provence",
+    "Mediterran\u00e9e",
+    "Chapelle-Chambertin Grand Cru",
+    "Latrici\u00e8res-Chambertin Grand Cru",
+    "Cr\u00e9mant de Limoux",
+    "St. Georges-St. \u00c9milion",
+    "Bordeaux Sup\u00e9rieur",
+    "Juran\u00e7on Sec",
+    "Francs C\u00f4tes de Bordeaux",
+    "Bonnes Mares Grand Cru",
+    "Corton-Charlemagne Grand Cru",
+    "Southern Rh\u00f4ne",
+    "Blaye C\u00f4tes de Bordeaux",
+    "Alsace",
+    "Savenni\u00e8res-Coul\u00e9e de Serrant",
+    "Anjou-Saumur",
+    "Vin de Pays d'Oc",
+    "Moulis en M\u00e9doc",
+    "Margaux",
+    "Ratafia de Champagne",
+    "Haut-M\u00e9doc",
+    "Sauternais",
+    "Arbois",
+    "C\u00f4tes de Gascogne",
+    "Bas Armagnac",
+    "Pays Basque",
+    "Burgundy",
+    "Criots-B\u00e2tard-Montrachet Grand Cru",
+    "Pessac-L\u00e9ognan",
+    "C\u00f4tes du Roussillon",
+    "Touraine",
+    "Grands-Echezeaux Grand Cru",
+    "Collioure",
+    "Bourgogne Hautes-C\u00f4tes de Beaune",
+    "Corsica",
+    "Champagne",
+    "Roman\u00e9e St. Vivant Grand Cru",
+    "Libournais",
+    "C\u00f4te-R\u00f4tie",
+    "Languedoc",
+    "Saint-Guilhem-le-D\u00e9sert",
+    "Gascony",
+    "Juran\u00e7on",
+    "Provence",
+    "Champagne Grand Cru",
+    "Clos des Lambrays Grand Cru",
+    "Graves",
+    "Chevalier-Montrachet Grand Cru",
+    "Vin de Table Fran\u00e7ais",
+    "Bourgueil",
+    "Corse",
+    "Iroul\u00e9guy",
+    "Chambertin-Clos de B\u00e8ze Grand Cru",
+    "St. \u00c9milion Grand Cru",
+    "B\u00e2tard-Montrachet Grand Cru",
+    "C\u00f4te de Beaune",
+    "St. Est\u00e8phe",
+    "Clos Vougeot Grand Cru",
+    "Bienvenues-B\u00e2tard-Montrachet Grand Cru",
+    "Savoie",
+    "Cassis",
+    "Rh\u00f4ne",
+    "Vin de Pays des Collines Rhodaniennes",
+    "Vin de Savoie",
+    "St. Julien",
+    "Castillon C\u00f4tes de Bordeaux",
+    "C\u00f4tes Catalanes",
+    "Sauternes",
+    "Pauillac",
+    "M\u00e9doc",
+    "Charmes-Chambertin Grand Cru",
+    "Terrasses du Larzac",
+    "Entre-Deux-Mers"
+  ],
+  "Bordeaux": [
+    "Pessac-L\u00e9ognan",
+    "St. \u00c9milion Grand Cru",
+    "St. Est\u00e8phe",
+    "St. Georges-St. \u00c9milion",
+    "Lalande de Pomerol",
+    "Bordeaux Sup\u00e9rieur",
+    "Francs C\u00f4tes de Bordeaux",
+    "Blaye C\u00f4tes de Bordeaux",
+    "Montagne-St. \u00c9milion",
+    "Sainte Foy Bordeaux",
+    "St. Julien",
+    "Castillon C\u00f4tes de Bordeaux",
+    "Sauternes",
+    "Libournais",
+    "Pauillac",
+    "M\u00e9doc",
+    "Moulis en M\u00e9doc",
+    "Entre-Deux-Mers",
+    "Barsac",
+    "Margaux",
+    "Haut-M\u00e9doc",
+    "Sauternais",
+    "Fronsac",
+    "Graves"
+  ],
+  "M\u00e9doc": [
+    "Margaux",
+    "Haut-M\u00e9doc",
+    "St. Julien",
+    "St. Est\u00e8phe",
+    "Pauillac",
+    "Moulis en M\u00e9doc"
+  ],
+  "USA": [
+    "Oakville",
+    "Oregon",
+    "Kentucky",
+    "Edna Valley",
+    "Northern Virginia",
+    "Clements Hills",
+    "Moon Mountain District",
+    "Yakima Valley",
+    "Santa Maria Valley",
+    "Clarksburg",
+    "Yamhill-Carlton",
+    "Oregon/Washington",
+    "Pennsylvania",
+    "Santa Cruz Mountains",
+    "Mendocino County",
+    "Yountville",
+    "Paso Robles Adelaida District",
+    "Amador County",
+    "Spring Mountain District",
+    "Snake River Valley",
+    "Old Mission Peninsula",
+    "Sta. Rita Hills",
+    "Chehalem Mountains",
+    "Texas Hill Country",
+    "Rockpile",
+    "Humboldt County",
+    "North Yuba",
+    "San Benito County",
+    "Seneca Lake",
+    "Dry Creek Valley",
+    "Lodi Mokelumne River",
+    "Texas",
+    "Ribbon Ridge",
+    "Yamhill County",
+    "San Antonio Valley",
+    "Hames Valley",
+    "Sierra Foothills",
+    "Lodi",
+    "Anderson Valley",
+    "Walla Walla Valley",
+    "El Dorado County",
+    "Los Olivos District",
+    "Wisconsin",
+    "Colorado",
+    "Mendocino Ridge",
+    "Happy Canyon of Santa Barbara",
+    "Howell Mountain",
+    "Idaho",
+    "Petaluma Gap",
+    "North Dakota",
+    "Suisun Valley",
+    "South Dakota",
+    "Red Hills Lake County",
+    "Santa Lucia Highlands",
+    "Russian River Valley",
+    "Loudoun County",
+    "Lake County",
+    "Ballard Canyon",
+    "Yolo County",
+    "Virginia",
+    "Napa Valley",
+    "Texas High Plains",
+    "Santa Clara County",
+    "Temecula Valley",
+    "Finger Lakes",
+    "Stags Leap District",
+    "Santa Clara Valley",
+    "Wahluke Slope",
+    "Stanislaus County",
+    "Paicines",
+    "St. Helena",
+    "San Francisco Bay",
+    "North Coast",
+    "Michigan",
+    "Fort Ross - Seaview",
+    "Eola - Amity Hills",
+    "South Coast",
+    "Arroyo Seco",
+    "Diamond Mountain",
+    "Paso Robles Templeton Gap District",
+    "Horse Heaven Hills",
+    "Oak Knoll District",
+    "New Jersey",
+    "Napa / Sonoma",
+    "Bennett Valley",
+    "Knights Valley",
+    "Carneros",
+    "North Carolina",
+    "Tualatin Hills",
+    "Central Virginia",
+    "Sonoma Coast",
+    "Monterey County",
+    "California Shenandoah Valley",
+    "Paso Robles",
+    "Livermore Valley",
+    "San Luis Obispo County",
+    "Columbia Valley",
+    "Rattlesnake Hills",
+    "Rutherford",
+    "McMinnville",
+    "California",
+    "Chalone",
+    "Willamette Valley",
+    "Cucamonga Valley",
+    "Santa Ynez Valley",
+    "Mt. Veeder",
+    "Paso Robles Willow Creek District",
+    "Alta Mesa",
+    "Calistoga",
+    "Washington",
+    "Alexander Valley",
+    "Royal Slope",
+    "Santa Barbara County",
+    "Yorkville Highlands",
+    "New York",
+    "Dundee Hills",
+    "Coombsville",
+    "Central Coast",
+    "Columbia Gorge",
+    "Yakima Valley Snipes Mountain",
+    "Chester County",
+    "San Mateo County",
+    "Sonoma County",
+    "Madison County",
+    "Arroyo Grande Valley",
+    "McElmo Canyon",
+    "Lodi Jahant",
+    "Monticello",
+    "Contra Costa County",
+    "Central Valley"
+  ],
+  "Oregon": [
+    "Dundee Hills",
+    "Chehalem Mountains",
+    "Willamette Valley",
+    "Eola - Amity Hills",
+    "Ribbon Ridge",
+    "Yamhill County",
+    "McMinnville",
+    "Tualatin Hills",
+    "Yamhill-Carlton"
+  ],
+  "Willamette Valley": [
+    "Dundee Hills",
+    "Chehalem Mountains",
+    "Eola - Amity Hills",
+    "Ribbon Ridge",
+    "McMinnville",
+    "Tualatin Hills",
+    "Yamhill-Carlton"
+  ],
+  "California": [
+    "Oakville",
+    "Edna Valley",
+    "Clements Hills",
+    "Moon Mountain District",
+    "Santa Maria Valley",
+    "Clarksburg",
+    "Santa Cruz Mountains",
+    "Mendocino County",
+    "Yountville",
+    "Paso Robles Adelaida District",
+    "Amador County",
+    "Spring Mountain District",
+    "Sta. Rita Hills",
+    "Rockpile",
+    "Humboldt County",
+    "North Yuba",
+    "San Benito County",
+    "Central Valley",
+    "Dry Creek Valley",
+    "Lodi Mokelumne River",
+    "San Antonio Valley",
+    "Hames Valley",
+    "Sierra Foothills",
+    "Lodi",
+    "Anderson Valley",
+    "El Dorado County",
+    "Los Olivos District",
+    "Mendocino Ridge",
+    "Happy Canyon of Santa Barbara",
+    "Howell Mountain",
+    "Petaluma Gap",
+    "Suisun Valley",
+    "Red Hills Lake County",
+    "Santa Lucia Highlands",
+    "Russian River Valley",
+    "Lake County",
+    "Ballard Canyon",
+    "Yolo County",
+    "Napa Valley",
+    "Santa Clara County",
+    "Temecula Valley",
+    "Stags Leap District",
+    "Santa Clara Valley",
+    "Stanislaus County",
+    "Paicines",
+    "St. Helena",
+    "San Francisco Bay",
+    "North Coast",
+    "Fort Ross - Seaview",
+    "South Coast",
+    "Arroyo Seco",
+    "Diamond Mountain",
+    "Paso Robles Templeton Gap District",
+    "Oak Knoll District",
+    "Napa / Sonoma",
+    "Bennett Valley",
+    "Knights Valley",
+    "Carneros",
+    "Sonoma Coast",
+    "Monterey County",
+    "California Shenandoah Valley",
+    "Paso Robles",
+    "Livermore Valley",
+    "San Luis Obispo County",
+    "Rutherford",
+    "Chalone",
+    "Santa Ynez Valley",
+    "Mt. Veeder",
+    "Paso Robles Willow Creek District",
+    "Alta Mesa",
+    "Calistoga",
+    "Alexander Valley",
+    "Santa Barbara County",
+    "Yorkville Highlands",
+    "Coombsville",
+    "Central Coast",
+    "San Mateo County",
+    "Sonoma County",
+    "Arroyo Grande Valley",
+    "Lodi Jahant",
+    "Contra Costa County",
+    "Cucamonga Valley"
+  ],
+  "Graves": [
+    "Pessac-L\u00e9ognan"
+  ],
+  "Italy": [
+    "Tuscany",
+    "Veronese IGT",
+    "Alto Adige",
+    "Vigneti delle Dolomiti IGT",
+    "Fiano di Avellino DOCG",
+    "Langhe DOC",
+    "Puglia",
+    "Taurasi DOCG",
+    "Alto Adige - S\u00fcdtirol",
+    "Friuli Isonzo",
+    "Salento IGT",
+    "Friuli Colli Orientali",
+    "Puglia IGT",
+    "Chianti Classico DOCG",
+    "Toscana IGT",
+    "Bolgheri",
+    "Lombardia / Veneto",
+    "Vino da Tavola",
+    "Valtellina",
+    "Roccamonfina IGT",
+    "Valle Isarco / Eisacktaler",
+    "Campania",
+    "Sforzato di Valtellina",
+    "Colli Euganei",
+    "Sicily",
+    "Chianti R\u00f9fina",
+    "Veneto IGT",
+    "Delle Venezie",
+    "Trentino Alto-Adige / Veneto",
+    "Valdobbiadene Prosecco Superiore DOCG",
+    "Venezia Giulia IGT",
+    "Emilia IGT",
+    "Bolgheri Sassicaia",
+    "Friuli-Venezia Giulia",
+    "Veneto",
+    "Friuli",
+    "Lombardia",
+    "Garda",
+    "Piedmont",
+    "Terre Siciliane",
+    "Langhe",
+    "Sicilia",
+    "Verdicchio di Matelica",
+    "Trentino-Alto Adige",
+    "Chianti",
+    "Etna DOC",
+    "Franciacorta DOCG",
+    "Emilia-Romagna",
+    "Greco di Tufo DOCG",
+    "Marche"
+  ],
+  "Tuscany": [
+    "Chianti Classico DOCG",
+    "Toscana IGT",
+    "Bolgheri",
+    "Bolgheri Sassicaia",
+    "Chianti",
+    "Chianti R\u00f9fina"
+  ],
+  "Napa Valley": [
+    "St. Helena",
+    "Mt. Veeder",
+    "Coombsville",
+    "Oakville",
+    "Oak Knoll District",
+    "Calistoga",
+    "Yountville",
+    "Rutherford",
+    "Howell Mountain",
+    "Stags Leap District",
+    "Spring Mountain District",
+    "Diamond Mountain"
+  ],
+  "Germany": [
+    "Baden",
+    "Mittelrhein",
+    "Mosel Saar Ruwer",
+    "Rheingau",
+    "Saale/Unstrut",
+    "Franken",
+    "W\u00fcrttemberg",
+    "Rheinhessen",
+    "Ahr",
+    "Nahe",
+    "Pfalz"
+  ],
+  "Sonoma County": [
+    "Sonoma Coast",
+    "Moon Mountain District",
+    "Dry Creek Valley",
+    "Rockpile",
+    "Alexander Valley",
+    "Fort Ross - Seaview",
+    "Russian River Valley",
+    "Bennett Valley",
+    "Knights Valley",
+    "Petaluma Gap"
+  ],
+  "Central Coast": [
+    "Chalone",
+    "Santa Clara County",
+    "Edna Valley",
+    "Santa Clara Valley",
+    "Paicines",
+    "Santa Ynez Valley",
+    "Hames Valley",
+    "Paso Robles Willow Creek District",
+    "San Antonio Valley",
+    "Santa Barbara County",
+    "Santa Maria Valley",
+    "Arroyo Seco",
+    "Los Olivos District",
+    "Paso Robles Templeton Gap District",
+    "Happy Canyon of Santa Barbara",
+    "Paso Robles Adelaida District",
+    "Sta. Rita Hills",
+    "Monterey County",
+    "Paso Robles",
+    "San Luis Obispo County",
+    "Arroyo Grande Valley",
+    "Santa Lucia Highlands",
+    "San Benito County",
+    "Ballard Canyon"
+  ],
+  "Libournais": [
+    "St. Georges-St. \u00c9milion",
+    "Lalande de Pomerol",
+    "Francs C\u00f4tes de Bordeaux",
+    "St. \u00c9milion Grand Cru",
+    "Castillon C\u00f4tes de Bordeaux",
+    "Fronsac",
+    "Montagne-St. \u00c9milion"
+  ],
+  "Chianti": [
+    "Chianti R\u00f9fina",
+    "Chianti Classico DOCG"
+  ],
+  "Bolgheri": [
+    "Bolgheri Sassicaia"
+  ],
+  "Lebanon": [
+    "Adyar",
+    "Bekaa Valley",
+    "Batroun"
+  ],
+  "Campania": [
+    "Roccamonfina IGT",
+    "Greco di Tufo DOCG",
+    "Taurasi DOCG",
+    "Fiano di Avellino DOCG"
+  ],
+  "Spain": [
+    "Jerez-X\u00e9r\u00e8s-Sherry",
+    "Priorat",
+    "Pa\u00eds Vasco",
+    "Castilla-La Mancha",
+    "Ribera del Duero",
+    "R\u00edas Baixas",
+    "Campo de Borja",
+    "Canary Islands",
+    "Ribeira Sacra",
+    "Pened\u00e8s",
+    "Catalunya",
+    "Arag\u00f3n",
+    "Valle de la Orotava",
+    "Vinos de Madrid",
+    "Lanzarote",
+    "Manchuela",
+    "Getariako Txakolina",
+    "Vino de la Tierra de Murcia",
+    "Rioja",
+    "Manzanilla de Sanl\u00facar de Barrameda",
+    "Galicia",
+    "Abona",
+    "Tenerife",
+    "Cari\u00f1ena",
+    "Madrid",
+    "Bierzo",
+    "Andaluc\u00eda",
+    "Montilla-Moriles",
+    "Cebreros",
+    "Corpinnat",
+    "La Rioja",
+    "Murcia",
+    "Castilla y Le\u00f3n",
+    "Vino de la Tierra de Castilla y Le\u00f3n"
+  ],
+  "Andaluc\u00eda": [
+    "Jerez-X\u00e9r\u00e8s-Sherry",
+    "Montilla-Moriles",
+    "Manzanilla de Sanl\u00facar de Barrameda"
+  ],
+  "North Coast": [
+    "Anderson Valley",
+    "Mendocino Ridge",
+    "Red Hills Lake County",
+    "Humboldt County",
+    "Mendocino County",
+    "Lake County",
+    "Yorkville Highlands",
+    "Suisun Valley"
+  ],
+  "Australia": [
+    "Big Rivers",
+    "New South Wales",
+    "Macedon Ranges",
+    "Coonawarra",
+    "McLaren Vale",
+    "Beechworth",
+    "Heathcote",
+    "Padthaway",
+    "Sunbury",
+    "Mornington Peninsula",
+    "Clare Valley",
+    "Grampians",
+    "Hilltops",
+    "Northern Slopes",
+    "Riverina",
+    "Northern Tasmania",
+    "Geelong",
+    "Adelaide Hills",
+    "Mount Lofty Ranges",
+    "Queensland",
+    "Great Southern",
+    "Pyrenees",
+    "North East",
+    "Nagambie Lakes",
+    "Western Victoria",
+    "Canberra District",
+    "Eden Valley",
+    "Coal River",
+    "Limestone Coast",
+    "Western Australia",
+    "Victoria",
+    "Henty",
+    "Barossa",
+    "South Eastern",
+    "Granite Belt",
+    "Freycinet Coast",
+    "Rutherglen",
+    "Port Phillip",
+    "Frankland River",
+    "South West Australia",
+    "Mount Barker",
+    "Hunter Valley",
+    "Fleurieu",
+    "South Australia",
+    "Yarra Valley",
+    "Langhorne Creek",
+    "Tamar Valley",
+    "Gippsland",
+    "Margaret River",
+    "Tasmania",
+    "Barossa Valley",
+    "Pokolbin",
+    "Southern Tasmania",
+    "Central Victoria",
+    "Southern New South Wales"
+  ],
+  "South Australia": [
+    "Adelaide Hills",
+    "Coonawarra",
+    "Barossa",
+    "McLaren Vale",
+    "Mount Lofty Ranges",
+    "Fleurieu",
+    "Langhorne Creek",
+    "Padthaway",
+    "Clare Valley",
+    "Barossa Valley",
+    "Eden Valley",
+    "Limestone Coast"
+  ],
+  "Barossa": [
+    "Eden Valley",
+    "Barossa Valley"
+  ],
+  "Washington": [
+    "Horse Heaven Hills",
+    "Walla Walla Valley",
+    "Yakima Valley",
+    "Royal Slope",
+    "Columbia Valley",
+    "Rattlesnake Hills",
+    "Wahluke Slope",
+    "Yakima Valley Snipes Mountain"
+  ],
+  "Columbia Valley": [
+    "Horse Heaven Hills",
+    "Walla Walla Valley",
+    "Yakima Valley",
+    "Royal Slope",
+    "Rattlesnake Hills",
+    "Wahluke Slope",
+    "Yakima Valley Snipes Mountain"
+  ],
+  "Sicily": [
+    "Sicilia",
+    "Terre Siciliane",
+    "Etna DOC"
+  ],
+  "Sauternais": [
+    "Sauternes",
+    "Barsac"
+  ],
+  "Central Valley": [
+    "Clements Hills",
+    "Alta Mesa",
+    "Lodi",
+    "Lodi Mokelumne River",
+    "Lodi Jahant",
+    "Clarksburg",
+    "Stanislaus County",
+    "Yolo County"
+  ],
+  "Napa / Sonoma": [
+    "Carneros"
+  ],
+  "Sierra Foothills": [
+    "California Shenandoah Valley",
+    "El Dorado County",
+    "Amador County",
+    "North Yuba"
+  ],
+  "New Zealand": [
+    "Auckland",
+    "Central Otago",
+    "Waiheke Island",
+    "South Island",
+    "Marlborough",
+    "Otago",
+    "Bannockburn",
+    "Martinborough",
+    "Wairarapa",
+    "Hawke's Bay",
+    "Nelson",
+    "Gimblett Gravels",
+    "Lake Wanaka",
+    "North Island"
+  ],
+  "North Island": [
+    "Auckland",
+    "Waiheke Island",
+    "Gimblett Gravels",
+    "Martinborough",
+    "Wairarapa",
+    "Hawke's Bay"
+  ],
+  "Wairarapa": [
+    "Martinborough"
+  ],
+  "Fleurieu": [
+    "McLaren Vale",
+    "Langhorne Creek"
+  ],
+  "Argentina": [
+    "Altamira",
+    "Tupungato",
+    "Agrelo",
+    "La Consulta",
+    "Mendoza",
+    "Vistalba",
+    "Gualtallary",
+    "Patagonia",
+    "Lujan de Cuyo",
+    "Jujuy",
+    "Valle de Uco",
+    "R\u00edo Negro"
+  ],
+  "Mendoza": [
+    "Tupungato",
+    "Agrelo",
+    "La Consulta",
+    "Vistalba",
+    "Gualtallary",
+    "Lujan de Cuyo",
+    "Altamira",
+    "Valle de Uco"
+  ],
+  "Lujan de Cuyo": [
+    "Agrelo",
+    "Vistalba"
+  ],
+  "San Francisco Bay": [
+    "Contra Costa County",
+    "San Mateo County",
+    "Livermore Valley"
+  ],
+  "Loire Valley": [
+    "Anjou-Saumur",
+    "Savenni\u00e8res-Coul\u00e9e de Serrant",
+    "Touraine",
+    "Bourgueil",
+    "Anjou"
+  ],
+  "Anjou-Saumur": [
+    "Anjou",
+    "Savenni\u00e8res-Coul\u00e9e de Serrant"
+  ],
+  "Languedoc Roussillon": [
+    "C\u00f4tes du Roussillon",
+    "Collioure",
+    "C\u00f4tes Catalanes",
+    "Vin de Pays d'Oc",
+    "Roussillon",
+    "Terrasses du Larzac",
+    "Languedoc",
+    "Saint-Guilhem-le-D\u00e9sert",
+    "Cr\u00e9mant de Limoux"
+  ],
+  "New South Wales": [
+    "Big Rivers",
+    "Hunter Valley",
+    "Hilltops",
+    "Pokolbin",
+    "Canberra District",
+    "Northern Slopes",
+    "Riverina",
+    "Southern New South Wales"
+  ],
+  "Southern New South Wales": [
+    "Canberra District",
+    "Hilltops"
+  ],
+  "Rh\u00f4ne": [
+    "Costi\u00e8res-de-N\u00eemes",
+    "Northern Rh\u00f4ne",
+    "Southern Rh\u00f4ne",
+    "Ard\u00e8che",
+    "C\u00f4te-R\u00f4tie",
+    "Vin de Pays des Collines Rhodaniennes"
+  ],
+  "Northern Rh\u00f4ne": [
+    "Vin de Pays des Collines Rhodaniennes",
+    "Ard\u00e8che",
+    "C\u00f4te-R\u00f4tie"
+  ],
+  "Trentino Alto-Adige / Veneto": [
+    "Vigneti delle Dolomiti IGT"
+  ],
+  "Limestone Coast": [
+    "Coonawarra",
+    "Padthaway"
+  ],
+  "South Africa": [
+    "Tulbagh",
+    "Stellenbosch",
+    "Overberg",
+    "Citrusdal",
+    "Swellendam",
+    "Malmesbury",
+    "Simonsberg-Stellenbosch",
+    "Cape South Coast",
+    "Malgas",
+    "Walker Bay",
+    "Olifants River",
+    "Breedekloof",
+    "Slanghoek",
+    "Paarl",
+    "Swartland",
+    "Coastal Region",
+    "Robertson",
+    "Western Cape",
+    "Hemel-en-Aarde Ridge",
+    "Hemel-en-Aarde Valley",
+    "Breede River Valley",
+    "Simonsberg-Paarl"
+  ],
+  "Coastal Region": [
+    "Tulbagh",
+    "Paarl",
+    "Stellenbosch",
+    "Swartland",
+    "Malmesbury",
+    "Simonsberg-Stellenbosch",
+    "Simonsberg-Paarl"
+  ],
+  "Swartland": [
+    "Malmesbury"
+  ],
+  "Canada": [
+    "British Columbia",
+    "Four Mile Creek VQA",
+    "Creek Shores VQA",
+    "Beamsville Bench VQA",
+    "Skaha Bench",
+    "Vinemount Ridge VQA",
+    "Niagara Peninsula VQA",
+    "Similkameen Valley VQA",
+    "Niagara-on-the-Lake VQA",
+    "Okanagan Valley VQA",
+    "Similkameen Valley",
+    "Okanagan Valley",
+    "Quebec",
+    "Mont\u00e9r\u00e9gie",
+    "Ontario",
+    "Niagara Peninsula",
+    "St. David's Bench VQA",
+    "Twenty Mile Bench VQA"
+  ],
+  "British Columbia": [
+    "Skaha Bench",
+    "Okanagan Valley VQA",
+    "Similkameen Valley",
+    "Okanagan Valley",
+    "Similkameen Valley VQA"
+  ],
+  "Okanagan Valley": [
+    "Okanagan Valley VQA",
+    "Skaha Bench"
+  ],
+  "Chile": [
+    "Rapel Valley",
+    "Cachapoal Valley",
+    "Atacama",
+    "Valle de Huasco",
+    "Limar\u00ed Valley",
+    "Isla de Maipo",
+    "Maipo Valley",
+    "Aconcagua Valley",
+    "Maule Valley",
+    "Puente Alto",
+    "Itata Valley",
+    "Colchagua Valley",
+    "Zapallar"
+  ],
+  "Maipo Valley": [
+    "Puente Alto",
+    "Isla de Maipo"
+  ],
+  "Portugal": [
+    "Lisboa",
+    "Beira Atl\u00e2ntico",
+    "Vinho Regional Alentejano",
+    "Madeira",
+    "Alentejano",
+    "Vinho Regional Lisboa",
+    "Vinho Regional A\u00e7ores",
+    "D\u00e3o",
+    "Beiras",
+    "A\u00e7ores",
+    "Alentejo",
+    "Vinho Verde",
+    "Minho"
+  ],
+  "United Kingdom": [
+    "Scotland",
+    "England",
+    "East Sussex",
+    "Hampshire",
+    "Essex",
+    "South West",
+    "Highlands",
+    "Sussex",
+    "West Sussex",
+    "Dorset"
+  ],
+  "England": [
+    "East Sussex",
+    "Hampshire",
+    "Essex",
+    "South West",
+    "Sussex",
+    "West Sussex",
+    "Dorset"
+  ],
+  "Sussex": [
+    "West Sussex",
+    "East Sussex"
+  ],
+  "Armenia": [
+    "Armavir",
+    "Ararat"
+  ],
+  "Ararat": [
+    "Armavir"
+  ],
+  "Georgia": [
+    "Tsinandali",
+    "Kakheti"
+  ],
+  "Kakheti": [
+    "Tsinandali"
+  ],
+  "Cyprus": [
+    "Paphos",
+    "Limassol"
+  ],
+  "Austria": [
+    "Wachau",
+    "Nieder\u00f6sterreich",
+    "S\u00fcdsteiermark",
+    "Mittelburgenland",
+    "Burgenland",
+    "Traisental",
+    "Weinviertel",
+    "Kremstal",
+    "Styria",
+    "Neusiedlersee",
+    "Neusiedlersee-H\u00fcgelland",
+    "Kamptal"
+  ],
+  "Burgenland": [
+    "Mittelburgenland",
+    "Neusiedlersee-H\u00fcgelland",
+    "Neusiedlersee"
+  ],
+  "Burgundy": [
+    "Coteaux Bourguignons",
+    "Chambertin-Clos de B\u00e8ze Grand Cru",
+    "B\u00e2tard-Montrachet Grand Cru",
+    "C\u00f4te de Beaune",
+    "Clos Vougeot Grand Cru",
+    "Grands-Echezeaux Grand Cru",
+    "Chapelle-Chambertin Grand Cru",
+    "Bienvenues-B\u00e2tard-Montrachet Grand Cru",
+    "Mazoy\u00e8res-Chambertin Grand Cru",
+    "Griotte-Chambertin Grand Cru",
+    "Latrici\u00e8res-Chambertin Grand Cru",
+    "Bonnes Mares Grand Cru",
+    "Corton-Charlemagne Grand Cru",
+    "Bourgogne Hautes-C\u00f4tes de Beaune",
+    "C\u00f4te de Nuits",
+    "Roman\u00e9e St. Vivant Grand Cru",
+    "Clos St. Denis Grand Cru",
+    "Charmes-Chambertin Grand Cru",
+    "Chambertin Grand Cru",
+    "Clos des Lambrays Grand Cru",
+    "Mazis-Chambertin Grand Cru",
+    "Chevalier-Montrachet Grand Cru",
+    "Criots-B\u00e2tard-Montrachet Grand Cru"
+  ],
+  "C\u00f4te de Nuits": [
+    "Roman\u00e9e St. Vivant Grand Cru",
+    "Latrici\u00e8res-Chambertin Grand Cru",
+    "Chambertin Grand Cru",
+    "Chambertin-Clos de B\u00e8ze Grand Cru",
+    "Bonnes Mares Grand Cru",
+    "Clos des Lambrays Grand Cru",
+    "Mazis-Chambertin Grand Cru",
+    "Clos St. Denis Grand Cru",
+    "Clos Vougeot Grand Cru",
+    "Charmes-Chambertin Grand Cru",
+    "Grands-Echezeaux Grand Cru",
+    "Chapelle-Chambertin Grand Cru",
+    "Mazoy\u00e8res-Chambertin Grand Cru",
+    "Griotte-Chambertin Grand Cru"
+  ],
+  "Alsace": [
+    "Alsace Grand Cru"
+  ],
+  "Greece": [
+    "Larissa",
+    "Aegean",
+    "Thessaly",
+    "Mantinia",
+    "Samos",
+    "Chalkidiki",
+    "Santorini",
+    "Peloponnese",
+    "Mavrodaphne of Patras",
+    "Peloponnisos",
+    "Mt. Athos",
+    "Rethymno",
+    "Amyndaio",
+    "Florina",
+    "Nemea",
+    "Naoussa",
+    "Epanomi",
+    "Continental Greece",
+    "Macedonia",
+    "Slopes of Aigialia",
+    "Pangeon",
+    "Attica",
+    "Cyclades",
+    "Crete"
+  ],
+  "Crete": [
+    "Rethymno"
+  ],
+  "Patagonia": [
+    "R\u00edo Negro"
+  ],
+  "Mount Lofty Ranges": [
+    "Clare Valley",
+    "Adelaide Hills"
+  ],
+  "Brazil": [
+    "Santa Catarina",
+    "Serra Ga\u00facha",
+    "Vale dos Vinhedos",
+    "Rio Grande do Sul",
+    "Planalto Catarinense"
+  ],
+  "Santa Catarina": [
+    "Planalto Catarinense"
+  ],
+  "Lombardia": [
+    "Sforzato di Valtellina",
+    "Valtellina",
+    "Franciacorta DOCG"
+  ],
+  "Valtellina": [
+    "Sforzato di Valtellina"
+  ],
+  "Trentino-Alto Adige": [
+    "Alto Adige",
+    "Valle Isarco / Eisacktaler",
+    "Alto Adige - S\u00fcdtirol"
+  ],
+  "Alto Adige": [
+    "Valle Isarco / Eisacktaler",
+    "Alto Adige - S\u00fcdtirol"
+  ],
+  "Piedmont": [
+    "Langhe",
+    "Langhe DOC"
+  ],
+  "Langhe": [
+    "Langhe DOC"
+  ],
+  "Provence": [
+    "Mediterran\u00e9e",
+    "C\u00f4tes de Provence",
+    "Alpilles",
+    "Cassis"
+  ],
+  "Aegean": [
+    "Cyclades",
+    "Samos",
+    "Santorini"
+  ],
+  "Cyclades": [
+    "Santorini"
+  ],
+  "New York": [
+    "Seneca Lake",
+    "Finger Lakes"
+  ],
+  "Finger Lakes": [
+    "Seneca Lake"
+  ],
+  "C\u00f4te de Beaune": [
+    "B\u00e2tard-Montrachet Grand Cru",
+    "Corton-Charlemagne Grand Cru",
+    "Chevalier-Montrachet Grand Cru",
+    "Bienvenues-B\u00e2tard-Montrachet Grand Cru",
+    "Criots-B\u00e2tard-Montrachet Grand Cru"
+  ],
+  "Switzerland": [
+    "Vino da Tavola della Svizzera Italiana",
+    "Leytron",
+    "Schaffhausen",
+    "Ticino",
+    "Ottoberg",
+    "Valais",
+    "St\u00e4fa",
+    "Fl\u00e4sch",
+    "Z\u00fcrich",
+    "Zizers",
+    "Benken",
+    "Z\u00fcrichsee",
+    "Thurgau",
+    "St. Gallen",
+    "V\u00e9troz",
+    "Graub\u00fcnden",
+    "Herrliberg",
+    "Eastern Switzerland"
+  ],
+  "Eastern Switzerland": [
+    "Schaffhausen",
+    "Ottoberg",
+    "St\u00e4fa",
+    "Fl\u00e4sch",
+    "Z\u00fcrich",
+    "Zizers",
+    "Benken",
+    "Z\u00fcrichsee",
+    "Thurgau",
+    "St. Gallen",
+    "Graub\u00fcnden",
+    "Herrliberg"
+  ],
+  "Graub\u00fcnden": [
+    "Fl\u00e4sch"
+  ],
+  "Champagne": [
+    "Ratafia de Champagne",
+    "Champagne Grand Cru"
+  ],
+  "Olifants River": [
+    "Citrusdal"
+  ],
+  "Israel": [
+    "Zichron Ya'akov",
+    "Samaria",
+    "Judean Hills",
+    "Golan Heights",
+    "Upper Galilee / Judean Hills",
+    "Galilee"
+  ],
+  "Japan": [
+    "Nagano",
+    "Kansai",
+    "Hokkaido",
+    "Fukuoka",
+    "\u014cita",
+    "Kyushu",
+    "Wakayama",
+    "Ch\u016bbu",
+    "Kyoto",
+    "Hy\u014dgo"
+  ],
+  "South Island": [
+    "Central Otago",
+    "Marlborough",
+    "Otago",
+    "Bannockburn",
+    "Lake Wanaka",
+    "Nelson"
+  ],
+  "Ontario": [
+    "Four Mile Creek VQA",
+    "Creek Shores VQA",
+    "Beamsville Bench VQA",
+    "Vinemount Ridge VQA",
+    "Niagara Peninsula VQA",
+    "Niagara-on-the-Lake VQA",
+    "Niagara Peninsula",
+    "St. David's Bench VQA",
+    "Twenty Mile Bench VQA"
+  ],
+  "Niagara Peninsula": [
+    "Four Mile Creek VQA",
+    "Creek Shores VQA",
+    "Beamsville Bench VQA",
+    "Vinemount Ridge VQA",
+    "Niagara Peninsula VQA",
+    "Niagara-on-the-Lake VQA",
+    "St. David's Bench VQA",
+    "Twenty Mile Bench VQA"
+  ],
+  "Montenegro": [
+    "Podgorica",
+    "Lake Skadar Valley"
+  ],
+  "Podgorica": [
+    "Lake Skadar Valley"
+  ],
+  "Romania": [
+    "Transylvania"
+  ],
+  "Castilla-La Mancha": [
+    "Manchuela"
+  ],
+  "Idaho": [
+    "Snake River Valley"
+  ],
+  "Nieder\u00f6sterreich": [
+    "Wachau",
+    "Traisental",
+    "Kremstal",
+    "Weinviertel",
+    "Kamptal"
+  ],
+  "Murcia": [
+    "Vino de la Tierra de Murcia"
+  ],
+  "Victoria": [
+    "Port Phillip",
+    "Geelong",
+    "Henty",
+    "Macedon Ranges",
+    "Heathcote",
+    "Beechworth",
+    "Pyrenees",
+    "Yarra Valley",
+    "Mornington Peninsula",
+    "Gippsland",
+    "Grampians",
+    "North East",
+    "Nagambie Lakes",
+    "Sunbury",
+    "Western Victoria",
+    "Central Victoria",
+    "Rutherglen"
+  ],
+  "Port Phillip": [
+    "Macedon Ranges",
+    "Sunbury",
+    "Yarra Valley",
+    "Mornington Peninsula",
+    "Geelong"
+  ],
+  "Hungary": [
+    "Szeksz\u00e1rdi",
+    "D\u00e9l-Pann\u00f3nia",
+    "Tokaji"
+  ],
+  "D\u00e9l-Pann\u00f3nia": [
+    "Szeksz\u00e1rdi"
+  ],
+  "Finland": [
+    "Varsinais-Suomi"
+  ],
+  "Western Australia": [
+    "Frankland River",
+    "South West Australia",
+    "Mount Barker",
+    "Great Southern",
+    "Margaret River"
+  ],
+  "South West Australia": [
+    "Mount Barker",
+    "Margaret River",
+    "Frankland River",
+    "Great Southern"
+  ],
+  "Croatia": [
+    "Dalmatia",
+    "Istra",
+    "Hvar",
+    "Ple\u0161ivica-Oki\u0107",
+    "Istria and Kvarner",
+    "Ple\u0161ivica",
+    "Croatian Uplands",
+    "Kor\u010dula",
+    "Srednja i ju\u017ena Dalmacija"
+  ],
+  "Istria and Kvarner": [
+    "Istra"
+  ],
+  "Castilla y Le\u00f3n": [
+    "Bierzo",
+    "Ribera del Duero",
+    "Cebreros",
+    "Vino de la Tierra de Castilla y Le\u00f3n"
+  ],
+  "Valle de Uco": [
+    "La Consulta",
+    "Tupungato",
+    "Altamira",
+    "Gualtallary"
+  ],
+  "Macedonia": [
+    "Amyndaio",
+    "Florina",
+    "Chalkidiki",
+    "Pangeon",
+    "Naoussa",
+    "Epanomi",
+    "Mt. Athos"
+  ],
+  "Otago": [
+    "Central Otago",
+    "Lake Wanaka",
+    "Bannockburn"
+  ],
+  "Lombardia / Veneto": [
+    "Garda"
+  ],
+  "Cape South Coast": [
+    "Walker Bay",
+    "Overberg",
+    "Hemel-en-Aarde Ridge",
+    "Hemel-en-Aarde Valley",
+    "Malgas",
+    "Swellendam"
+  ],
+  "Walker Bay": [
+    "Hemel-en-Aarde Ridge",
+    "Hemel-en-Aarde Valley"
+  ],
+  "Tasmania": [
+    "Tamar Valley",
+    "Freycinet Coast",
+    "Southern Tasmania",
+    "Northern Tasmania",
+    "Coal River"
+  ],
+  "South Coast": [
+    "Temecula Valley",
+    "Cucamonga Valley"
+  ],
+  "Aconcagua Valley": [
+    "Zapallar"
+  ],
+  "Breede River Valley": [
+    "Breedekloof",
+    "Robertson",
+    "Slanghoek"
+  ],
+  "Breedekloof": [
+    "Slanghoek"
+  ],
+  "Arag\u00f3n": [
+    "Cari\u00f1ena",
+    "Campo de Borja"
+  ],
+  "Alentejano": [
+    "Vinho Regional Alentejano",
+    "Alentejo"
+  ],
+  "Turkey": [
+    "Ege B\u00f6lgesi"
+  ],
+  "Slovakia": [
+    "Ju\u017enoslovensk\u00e1",
+    "\u0160t\u00farovsk\u00fd",
+    "Mu\u017ela"
+  ],
+  "Ju\u017enoslovensk\u00e1": [
+    "\u0160t\u00farovsk\u00fd",
+    "Mu\u017ela"
+  ],
+  "\u0160t\u00farovsk\u00fd": [
+    "Mu\u017ela"
+  ],
+  "Minho": [
+    "Vinho Verde"
+  ],
+  "Veneto": [
+    "Colli Euganei",
+    "Valdobbiadene Prosecco Superiore DOCG",
+    "Veneto IGT",
+    "Veronese IGT"
+  ],
+  "Slovenia": [
+    "Podravje",
+    "Vipava Valley",
+    "Gori\u0161ka Brda",
+    "\u0160tajerska",
+    "Primorska",
+    "Vipavske dolina"
+  ],
+  "Primorska": [
+    "Gori\u0161ka Brda",
+    "Vipava Valley",
+    "Vipavske dolina"
+  ],
+  "Vipava Valley": [
+    "Vipavske dolina"
+  ],
+  "Styria": [
+    "S\u00fcdsteiermark"
+  ],
+  "Western Victoria": [
+    "Grampians",
+    "Henty",
+    "Pyrenees"
+  ],
+  "Auckland": [
+    "Waiheke Island"
+  ],
+  "North East": [
+    "Beechworth",
+    "Rutherglen"
+  ],
+  "Hawke's Bay": [
+    "Gimblett Gravels"
+  ],
+  "Entre-Deux-Mers": [
+    "Sainte Foy Bordeaux"
+  ],
+  "Valais": [
+    "Leytron",
+    "V\u00e9troz"
+  ],
+  "Mexico": [
+    "Valle de Parras",
+    "Jalisco",
+    "Tequila",
+    "Coahuila"
+  ],
+  "Jalisco": [
+    "Tequila"
+  ],
+  "Central Victoria": [
+    "Nagambie Lakes",
+    "Heathcote"
+  ],
+  "Emilia-Romagna": [
+    "Vino da Tavola",
+    "Emilia IGT"
+  ],
+  "Uruguay": [
+    "Maldonado"
+  ],
+  "Catalunya": [
+    "Corpinnat",
+    "Priorat",
+    "Pened\u00e8s"
+  ],
+  "Michigan": [
+    "Old Mission Peninsula"
+  ],
+  "Texas": [
+    "Texas High Plains",
+    "Texas Hill Country"
+  ],
+  "Virginia": [
+    "Madison County",
+    "Monticello",
+    "Loudoun County",
+    "Northern Virginia",
+    "Central Virginia"
+  ],
+  "Northern Virginia": [
+    "Loudoun County"
+  ],
+  "Scotland": [
+    "Highlands"
+  ],
+  "Madrid": [
+    "Vinos de Madrid"
+  ],
+  "Podravje": [
+    "\u0160tajerska"
+  ],
+  "Central Virginia": [
+    "Madison County",
+    "Monticello"
+  ],
+  "Paarl": [
+    "Simonsberg-Paarl"
+  ],
+  "Peloponnisos": [
+    "Mantinia",
+    "Slopes of Aigialia",
+    "Mavrodaphne of Patras",
+    "Nemea",
+    "Peloponnese"
+  ],
+  "Rio Grande do Sul": [
+    "Serra Ga\u00facha",
+    "Vale dos Vinhedos"
+  ],
+  "Serra Ga\u00facha": [
+    "Vale dos Vinhedos"
+  ],
+  "Roussillon": [
+    "C\u00f4tes Catalanes",
+    "C\u00f4tes du Roussillon",
+    "Collioure"
+  ],
+  "Beiras": [
+    "D\u00e3o",
+    "Beira Atl\u00e2ntico"
+  ],
+  "Belgium": [
+    "Wallonie",
+    "Beerzel",
+    "C\u00f4tes de Sambre et Meuse",
+    "Flanders",
+    "Brussels",
+    "Oost Vlaanderen",
+    "Bruggenhout"
+  ],
+  "Colorado": [
+    "McElmo Canyon"
+  ],
+  "Puglia": [
+    "Salento IGT",
+    "Puglia IGT"
+  ],
+  "Southwest France": [
+    "Gascony",
+    "Juran\u00e7on Sec",
+    "Juran\u00e7on",
+    "Iroul\u00e9guy",
+    "C\u00f4tes de Gascogne",
+    "Bas Armagnac",
+    "Pays Basque"
+  ],
+  "Gascony": [
+    "C\u00f4tes de Gascogne",
+    "Bas Armagnac"
+  ],
+  "Netherlands": [
+    "Vaals",
+    "Limburg"
+  ],
+  "Limburg": [
+    "Vaals"
+  ],
+  "Galicia": [
+    "R\u00edas Baixas",
+    "Ribeira Sacra"
+  ],
+  "Coahuila": [
+    "Valle de Parras"
+  ],
+  "Z\u00fcrich": [
+    "St\u00e4fa",
+    "Benken",
+    "Herrliberg",
+    "Z\u00fcrichsee"
+  ],
+  "Dalmatia": [
+    "Srednja i ju\u017ena Dalmacija",
+    "Hvar",
+    "Kor\u010dula"
+  ],
+  "Srednja i ju\u017ena Dalmacija": [
+    "Hvar",
+    "Kor\u010dula"
+  ],
+  "Rapel Valley": [
+    "Cachapoal Valley",
+    "Colchagua Valley"
+  ],
+  "Samaria": [
+    "Zichron Ya'akov"
+  ],
+  "A\u00e7ores": [
+    "Vinho Regional A\u00e7ores"
+  ],
+  "Savoie": [
+    "Vin de Savoie"
+  ],
+  "South West": [
+    "Dorset"
+  ],
+  "Languedoc": [
+    "Saint-Guilhem-le-D\u00e9sert",
+    "Cr\u00e9mant de Limoux",
+    "Terrasses du Larzac"
+  ],
+  "Friuli-Venezia Giulia": [
+    "Friuli Isonzo",
+    "Venezia Giulia IGT",
+    "Friuli Colli Orientali",
+    "Friuli"
+  ],
+  "Malta": [
+    "DOK Gozo",
+    "IGT Maltese Islands",
+    "DOK Malta Superiore"
+  ],
+  "Marche": [
+    "Verdicchio di Matelica"
+  ],
+  "Oregon/Washington": [
+    "Columbia Gorge"
+  ],
+  "Lisboa": [
+    "Vinho Regional Lisboa"
+  ],
+  "Quebec": [
+    "Mont\u00e9r\u00e9gie"
+  ],
+  "Similkameen Valley": [
+    "Similkameen Valley VQA"
+  ],
+  "Atacama": [
+    "Valle de Huasco"
+  ],
+  "Jura": [
+    "Arbois"
+  ],
+  "Flanders": [
+    "Beerzel",
+    "Oost Vlaanderen",
+    "Bruggenhout"
+  ],
+  "Oost Vlaanderen": [
+    "Bruggenhout"
+  ],
+  "Kyushu": [
+    "Fukuoka",
+    "\u014cita"
+  ],
+  "Kansai": [
+    "Wakayama",
+    "Kyoto",
+    "Hy\u014dgo"
+  ],
+  "Wallonie": [
+    "C\u00f4tes de Sambre et Meuse"
+  ],
+  "Swellendam": [
+    "Malgas"
+  ],
+  "Big Rivers": [
+    "Riverina"
+  ],
+  "Queensland": [
+    "Granite Belt"
+  ],
+  "Touraine": [
+    "Bourgueil"
+  ],
+  "Canary Islands": [
+    "Abona",
+    "Valle de la Orotava",
+    "Lanzarote",
+    "Tenerife"
+  ],
+  "Tenerife": [
+    "Abona",
+    "Valle de la Orotava"
+  ],
+  "Hunter Valley": [
+    "Pokolbin"
+  ],
+  "Pays Basque": [
+    "Iroul\u00e9guy"
+  ],
+  "Stellenbosch": [
+    "Simonsberg-Stellenbosch"
+  ],
+  "La Rioja": [
+    "Rioja"
+  ],
+  "Southern Rh\u00f4ne": [
+    "Costi\u00e8res-de-N\u00eemes"
+  ],
+  "Batroun": [
+    "Adyar"
+  ],
+  "Croatian Uplands": [
+    "Ple\u0161ivica-Oki\u0107",
+    "Ple\u0161ivica"
+  ],
+  "Ple\u0161ivica": [
+    "Ple\u0161ivica-Oki\u0107"
+  ],
+  "Pa\u00eds Vasco": [
+    "Getariako Txakolina"
+  ],
+  "Moldova": [
+    "Cahul",
+    "Valul-lui-Traian"
+  ],
+  "Cahul": [
+    "Valul-lui-Traian"
+  ],
+  "Galilee": [
+    "Golan Heights"
+  ],
+  "Thessaly": [
+    "Larissa"
+  ],
+  "Serbia": [
+    "Kru\u0161evac",
+    "\u017dupa-Aleksandrovac",
+    "Zapadna Morava"
+  ],
+  "Zapadna Morava": [
+    "Kru\u0161evac",
+    "\u017dupa-Aleksandrovac"
+  ],
+  "Kru\u0161evac": [
+    "\u017dupa-Aleksandrovac"
+  ],
+  "Continental Greece": [
+    "Attica"
+  ],
+  "Thurgau": [
+    "Ottoberg"
+  ],
+  "Corsica": [
+    "Corse"
+  ],
+  "Ch\u016bbu": [
+    "Nagano"
+  ],
+  "Pennsylvania": [
+    "Chester County"
+  ],
+  "Ticino": [
+    "Vino da Tavola della Svizzera Italiana"
+  ],
+  "Bulgaria": [
+    "Suhindol"
+  ],
+  "Coteaux Bourguignons": [],
+  "Oakville": [],
+  "Veronese IGT": [],
+  "Rheingau": [],
+  "Padthaway": [],
+  "Grampians": [],
+  "Ribera del Duero": [],
+  "Langhe DOC": [],
+  "Weinviertel": [],
+  "V\u00e9troz": [],
+  "Mazoy\u00e8res-Chambertin Grand Cru": [],
+  "Herrliberg": [],
+  "Pfalz": [],
+  "Lalande de Pomerol": [],
+  "Friuli Colli Orientali": [],
+  "Peloponnese": [],
+  "Manchuela": [],
+  "Vino de la Tierra de Murcia": [],
+  "Mittelburgenland": [],
+  "Mendocino County": [],
+  "Yountville": [],
+  "Paso Robles Adelaida District": [],
+  "Clos St. Denis Grand Cru": [],
+  "Kremstal": [],
+  "Nahe": [],
+  "Texas Hill Country": [],
+  "Corpinnat": [],
+  "Fronsac": [],
+  "Humboldt County": [],
+  "Hemel-en-Aarde Valley": [],
+  "San Benito County": [],
+  "Seneca Lake": [],
+  "C\u00f4tes de Provence": [],
+  "Lodi Mokelumne River": [],
+  "Puente Alto": [],
+  "Ribeira Sacra": [],
+  "Anderson Valley": [],
+  "Wisconsin": [],
+  "Getariako Txakolina": [],
+  "Adyar": [],
+  "Niagara-on-the-Lake VQA": [],
+  "Happy Canyon of Santa Barbara": [],
+  "Vaals": [],
+  "Moulis en M\u00e9doc": [],
+  "Petaluma Gap": [],
+  "Ratafia de Champagne": [],
+  "East Sussex": [],
+  "Red Hills Lake County": [],
+  "Hemel-en-Aarde Ridge": [],
+  "Lake Wanaka": [],
+  "Franciacorta DOCG": [],
+  "Bas Armagnac": [],
+  "Itata Valley": [],
+  "Stags Leap District": [],
+  "Neusiedlersee-H\u00fcgelland": [],
+  "Santa Clara Valley": [],
+  "Campo de Borja": [],
+  "Northern Slopes": [],
+  "Puglia IGT": [],
+  "Isla de Maipo": [],
+  "Valle de la Orotava": [],
+  "Fort Ross - Seaview": [],
+  "Nagambie Lakes": [],
+  "Upper Galilee / Judean Hills": [],
+  "Veneto IGT": [],
+  "Baden": [],
+  "Manzanilla de Sanl\u00facar de Barrameda": [],
+  "Amyndaio": [],
+  "Knights Valley": [],
+  "Carneros": [],
+  "Saint-Guilhem-le-D\u00e9sert": [],
+  "Juran\u00e7on": [],
+  "Vinho Regional Lisboa": [],
+  "Rattlesnake Hills": [],
+  "Rutherford": [],
+  "Gippsland": [],
+  "Martinborough": [],
+  "Pangeon": [],
+  "Szeksz\u00e1rdi": [],
+  "Greco di Tufo DOCG": [],
+  "DOK Gozo": [],
+  "Chalone": [],
+  "Heathcote": [],
+  "Sunbury": [],
+  "Chalkidiki": [],
+  "Bannockburn": [],
+  "Hilltops": [],
+  "Neusiedlersee": [],
+  "Vino da Tavola della Svizzera Italiana": [],
+  "Cassis": [],
+  "Friuli Isonzo": [],
+  "Tequila": [],
+  "Pyrenees": [],
+  "Gimblett Gravels": [],
+  "Valle Isarco / Eisacktaler": [],
+  "Vipavske dolina": [],
+  "Dundee Hills": [],
+  "Central Otago": [],
+  "C\u00f4tes Catalanes": [],
+  "Charmes-Chambertin Grand Cru": [],
+  "Terrasses du Larzac": [],
+  "San Mateo County": [],
+  "Western Cape": [],
+  "Mount Barker": [],
+  "Madison County": [],
+  "Fukuoka": [],
+  "Lodi Jahant": [],
+  "Monticello": [],
+  "Yarra Valley": [],
+  "\u017dupa-Aleksandrovac": [],
+  "Mittelrhein": [],
+  "Istra": [],
+  "Clare Valley": [],
+  "Highlands": [],
+  "Golan Heights": [],
+  "Griotte-Chambertin Grand Cru": [],
+  "Clements Hills": [],
+  "Alpilles": [],
+  "Wakayama": [],
+  "Sforzato di Valtellina": [],
+  "Canberra District": [],
+  "Leytron": [],
+  "Schaffhausen": [],
+  "Henty": [],
+  "Ard\u00e8che": [],
+  "Cari\u00f1ena": [],
+  "Spring Mountain District": [],
+  "Epanomi": [],
+  "Cebreros": [],
+  "Garda": [],
+  "Chehalem Mountains": [],
+  "Chambertin Grand Cru": [],
+  "Niagara Peninsula VQA": [],
+  "\u014cita": [],
+  "Mantinia": [],
+  "Macedon Ranges": [],
+  "Dry Creek Valley": [],
+  "Skaha Bench": [],
+  "Essex": [],
+  "Fiano di Avellino DOCG": [],
+  "Ribbon Ridge": [],
+  "Yamhill County": [],
+  "Citrusdal": [],
+  "R\u00edas Baixas": [],
+  "Valle de Parras": [],
+  "Hames Valley": [],
+  "St\u00e4fa": [],
+  "Bonnes Mares Grand Cru": [],
+  "Vinho Regional A\u00e7ores": [],
+  "Madeira": [],
+  "Mont\u00e9r\u00e9gie": [],
+  "Mt. Athos": [],
+  "Hvar": [],
+  "Nemea": [],
+  "Margaux": [],
+  "Robertson": [],
+  "Cachapoal Valley": [],
+  "Terre Siciliane": [],
+  "Frankland River": [],
+  "Limar\u00ed Valley": [],
+  "South Dakota": [],
+  "Santa Lucia Highlands": [],
+  "Loudoun County": [],
+  "C\u00f4tes de Gascogne": [],
+  "Lake County": [],
+  "Ballard Canyon": [],
+  "Ple\u0161ivica-Oki\u0107": [],
+  "Vigneti delle Dolomiti IGT": [],
+  "Valul-lui-Traian": [],
+  "St. Gallen": [],
+  "Wahluke Slope": [],
+  "Kyoto": [],
+  "Stanislaus County": [],
+  "St. Helena": [],
+  "Tupungato": [],
+  "Santorini": [],
+  "C\u00f4tes de Sambre et Meuse": [],
+  "Vinos de Madrid": [],
+  "Collioure": [],
+  "Bourgogne Hautes-C\u00f4tes de Beaune": [],
+  "Oak Knoll District": [],
+  "New Jersey": [],
+  "Bennett Valley": [],
+  "C\u00f4te-R\u00f4tie": [],
+  "Vale dos Vinhedos": [],
+  "North Carolina": [],
+  "Tualatin Hills": [],
+  "Suhindol": [],
+  "IGT Maltese Islands": [],
+  "Champagne Grand Cru": [],
+  "Vino de la Tierra de Castilla y Le\u00f3n": [],
+  "Simonsberg-Paarl": [],
+  "Corse": [],
+  "Judean Hills": [],
+  "Coonawarra": [],
+  "B\u00e2tard-Montrachet Grand Cru": [],
+  "La Consulta": [],
+  "Z\u00fcrichsee": [],
+  "Four Mile Creek VQA": [],
+  "Adelaide Hills": [],
+  "Vinemount Ridge VQA": [],
+  "Calistoga": [],
+  "Royal Slope": [],
+  "Great Southern": [],
+  "Maule Valley": [],
+  "Yorkville Highlands": [],
+  "Vin de Pays des Collines Rhodaniennes": [],
+  "St. Julien": [],
+  "Castillon C\u00f4tes de Bordeaux": [],
+  "Venezia Giulia IGT": [],
+  "Benken": [],
+  "Pauillac": [],
+  "Nelson": [],
+  "Naoussa": [],
+  "Montilla-Moriles": [],
+  "Rutherglen": [],
+  "Chester County": [],
+  "Okanagan Valley VQA": [],
+  "Kor\u010dula": [],
+  "Altamira": [],
+  "Cucamonga Valley": [],
+  "Wachau": [],
+  "Edna Valley": [],
+  "Malmesbury": [],
+  "Moon Mountain District": [],
+  "Toscana IGT": [],
+  "Agrelo": [],
+  "Santa Maria Valley": [],
+  "Montagne-St. \u00c9milion": [],
+  "Yamhill-Carlton": [],
+  "Santa Cruz Mountains": [],
+  "Delle Venezie": [],
+  "Emilia IGT": [],
+  "Amador County": [],
+  "Ahr": [],
+  "Anjou": [],
+  "Kamptal": [],
+  "Costi\u00e8res-de-N\u00eemes": [],
+  "Mazis-Chambertin Grand Cru": [],
+  "Tulbagh": [],
+  "Tsinandali": [],
+  "Mediterran\u00e9e": [],
+  "Colchagua Valley": [],
+  "Chapelle-Chambertin Grand Cru": [],
+  "Latrici\u00e8res-Chambertin Grand Cru": [],
+  "El Dorado County": [],
+  "Bordeaux Sup\u00e9rieur": [],
+  "Francs C\u00f4tes de Bordeaux": [],
+  "Blaye C\u00f4tes de Bordeaux": [],
+  "Varsinais-Suomi": [],
+  "Mendocino Ridge": [],
+  "Howell Mountain": [],
+  "Vin de Pays d'Oc": [],
+  "Friuli": [],
+  "North Dakota": [],
+  "Ottoberg": [],
+  "Haut-M\u00e9doc": [],
+  "Zichron Ya'akov": [],
+  "Mu\u017ela": [],
+  "Margaret River": [],
+  "Slopes of Aigialia": [],
+  "Attica": [],
+  "Criots-B\u00e2tard-Montrachet Grand Cru": [],
+  "Yolo County": [],
+  "Larissa": [],
+  "Santa Clara County": [],
+  "Beechworth": [],
+  "S\u00fcdsteiermark": [],
+  "C\u00f4tes du Roussillon": [],
+  "Grands-Echezeaux Grand Cru": [],
+  "Taurasi DOCG": [],
+  "Simonsberg-Stellenbosch": [],
+  "Paicines": [],
+  "Salento IGT": [],
+  "Lanzarote": [],
+  "Arroyo Seco": [],
+  "Horse Heaven Hills": [],
+  "Rethymno": [],
+  "South Eastern": [],
+  "Abona": [],
+  "Bierzo": [],
+  "Nagano": [],
+  "Sonoma Coast": [],
+  "Monterey County": [],
+  "Paso Robles": [],
+  "San Luis Obispo County": [],
+  "Marlborough": [],
+  "Vin de Table Fran\u00e7ais": [],
+  "McMinnville": [],
+  "Pokolbin": [],
+  "Bourgueil": [],
+  "Ege B\u00f6lgesi": [],
+  "Iroul\u00e9guy": [],
+  "Priorat": [],
+  "Mornington Peninsula": [],
+  "W\u00fcrttemberg": [],
+  "Vistalba": [],
+  "Bienvenues-B\u00e2tard-Montrachet Grand Cru": [],
+  "Riverina": [],
+  "St. David's Bench VQA": [],
+  "Pened\u00e8s": [],
+  "Paso Robles Willow Creek District": [],
+  "Alta Mesa": [],
+  "Vinho Verde": [],
+  "Colli Euganei": [],
+  "Dorset": [],
+  "Coombsville": [],
+  "Columbia Gorge": [],
+  "Fl\u00e4sch": [],
+  "Sauternes": [],
+  "Alentejo": [],
+  "Yakima Valley Snipes Mountain": [],
+  "Arroyo Grande Valley": [],
+  "Sicilia": [],
+  "Barossa Valley": [],
+  "Hokkaido": [],
+  "McLaren Vale": [],
+  "Kentucky": [],
+  "Overberg": [],
+  "Zizers": [],
+  "Rheinhessen": [],
+  "Jujuy": [],
+  "Twenty Mile Bench VQA": [],
+  "Vino da Tavola": [],
+  "Yakima Valley": [],
+  "Alsace Grand Cru": [],
+  "Clarksburg": [],
+  "Hy\u014dgo": [],
+  "Rioja": [],
+  "Sainte Foy Bordeaux": [],
+  "Beira Atl\u00e2ntico": [],
+  "Bolgheri Sassicaia": [],
+  "Old Mission Peninsula": [],
+  "Snake River Valley": [],
+  "Sta. Rita Hills": [],
+  "Barsac": [],
+  "Saale/Unstrut": [],
+  "Valle de Huasco": [],
+  "Rockpile": [],
+  "North Yuba": [],
+  "Langhorne Creek": [],
+  "Southern Tasmania": [],
+  "Jerez-X\u00e9r\u00e8s-Sherry": [],
+  "Tokaji": [],
+  "Beamsville Bench VQA": [],
+  "Cr\u00e9mant de Limoux": [],
+  "R\u00edo Negro": [],
+  "St. Georges-St. \u00c9milion": [],
+  "San Antonio Valley": [],
+  "Juran\u00e7on Sec": [],
+  "Lodi": [],
+  "Walla Walla Valley": [],
+  "Chianti Classico DOCG": [],
+  "Corton-Charlemagne Grand Cru": [],
+  "Mavrodaphne of Patras": [],
+  "Limassol": [],
+  "Los Olivos District": [],
+  "Gualtallary": [],
+  "Similkameen Valley VQA": [],
+  "Savenni\u00e8res-Coul\u00e9e de Serrant": [],
+  "D\u00e3o": [],
+  "Valdobbiadene Prosecco Superiore DOCG": [],
+  "Florina": [],
+  "Gori\u0161ka Brda": [],
+  "Suisun Valley": [],
+  "DOK Malta Superiore": [],
+  "Maldonado": [],
+  "Arbois": [],
+  "Russian River Valley": [],
+  "Armavir": [],
+  "Etna DOC": [],
+  "Pessac-L\u00e9ognan": [],
+  "Creek Shores VQA": [],
+  "Texas High Plains": [],
+  "Temecula Valley": [],
+  "Franken": [],
+  "Traisental": [],
+  "Samos": [],
+  "Northern Tasmania": [],
+  "Bruggenhout": [],
+  "Lake Skadar Valley": [],
+  "Beerzel": [],
+  "Bekaa Valley": [],
+  "Eola - Amity Hills": [],
+  "Diamond Mountain": [],
+  "Chianti R\u00f9fina": [],
+  "Coal River": [],
+  "Paso Robles Templeton Gap District": [],
+  "Roman\u00e9e St. Vivant Grand Cru": [],
+  "Hampshire": [],
+  "Granite Belt": [],
+  "West Sussex": [],
+  "California Shenandoah Valley": [],
+  "Livermore Valley": [],
+  "Clos des Lambrays Grand Cru": [],
+  "Verdicchio di Matelica": [],
+  "Chevalier-Montrachet Grand Cru": [],
+  "Paphos": [],
+  "Geelong": [],
+  "Malgas": [],
+  "Chambertin-Clos de B\u00e8ze Grand Cru": [],
+  "St. \u00c9milion Grand Cru": [],
+  "St. Est\u00e8phe": [],
+  "Clos Vougeot Grand Cru": [],
+  "Brussels": [],
+  "Zapallar": [],
+  "Alto Adige - S\u00fcdtirol": [],
+  "Santa Ynez Valley": [],
+  "Mt. Veeder": [],
+  "Alexander Valley": [],
+  "Santa Barbara County": [],
+  "Roccamonfina IGT": [],
+  "Eden Valley": [],
+  "Transylvania": [],
+  "Planalto Catarinense": [],
+  "Vin de Savoie": [],
+  "Mosel Saar Ruwer": [],
+  "Slanghoek": [],
+  "Vinho Regional Alentejano": [],
+  "\u0160tajerska": [],
+  "Freycinet Coast": [],
+  "Waiheke Island": [],
+  "McElmo Canyon": [],
+  "Tamar Valley": [],
+  "Contra Costa County": []
+}

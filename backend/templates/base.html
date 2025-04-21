@@ -26,12 +26,13 @@
     
 
     <script>
-        function wineTemplate(name, review, rating, variety, similarity) {
+        function wineTemplate(name, review, rating, variety, similarity, location) {
             return `<div class="wine-entry">
                         <h3 class="wine-name">${name}</h3>
                         <p class="wine-review">${review}</p>
                         <p class="wine-rating">Rating: ${rating}</p>
                         ${variety ? `<p class="wine-variety">Variety: ${variety}</p>` : ''}
+                        ${location ? `<p class="wine-location">Location: ${location}</p>` : ''}
                         ${similarity ? `<p class="wine-similarity">Similarity Score: ${similarity}</p>` : ''}
                     </div>`;
         }
@@ -53,7 +54,8 @@
                             row["Review"],
                             row["Rating"],
                             row["Variety"],
-                            row["Similarity"]
+                            row["Similarity"],
+                            row["Location"]
                         );
                         document.getElementById("answer-box").appendChild(tempDiv);
                     });
