@@ -2,198 +2,206 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans",
-  sans-serif;
+    sans-serif;
   background: linear-gradient(
-  135deg,
-  #f9f3ec,
-  #fceee3
+    135deg,
+    #f9f3ec,
+    #fceee3
   );
   color: #2d2d2d;
-  }
-  .full-body-container {
+}
+.full-body-container {
   position: relative;
   padding: 60px
-  20px;
+    20px;
   background-color: #fff4ec;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   overflow-y: auto;
-  }
-  .site-title {
+}
+.site-title {
   font-size: 70px;
   color: #fff;
   font-family: "Kanit",
-  sans-serif;
+    sans-serif;
   margin: 0;
   text-shadow: 2px
-  2px
-  4px
-  rgba(
-  0,
-  0,
-  0,
-  0.4
-  );
-  }
-  .site-subtitle {
+    2px
+    4px
+    rgba(
+      0,
+      0,
+      0,
+      0.4
+    );
+}
+.site-subtitle {
   font-size: 22px;
   font-family: "Montserrat",
-  sans-serif;
+    sans-serif;
   color: #eee;
   margin-top: 10px;
-  }
-  .input-box {
+}
+.input-box {
   border-radius: 50px;
   border: 1px
-  solid
-  #ccc;
+    solid
+    #ccc;
   display: flex;
   align-items: center;
   padding: 14px
-  24px;
+    24px;
   max-width: 500px;
   width: 100%;
   background-color: #fff;
   box-shadow: 0
-  4px
-  10px
-  rgba(
-  0,
-  0,
-  0,
-  0.1
-  );
+    4px
+    10px
+    rgba(
+      0,
+      0,
+      0,
+      0.1
+    );
   transition: box-shadow
-  0.2s
-  ease;
-  }
-  .input-box:hover {
+    0.2s
+    ease;
+}
+.input-box:hover {
   box-shadow: 0
-  6px
-  16px
-  rgba(
-  0,
-  0,
-  0,
-  0.15
-  );
-  }
-  .input-box
+    6px
+    16px
+    rgba(
+      0,
+      0,
+      0,
+      0.15
+    );
+}
+.input-box
   img {
   height: 22px;
   width: 22px;
   opacity: 0.7;
-  }
-  .input-box
+}
+.input-box
   input {
   width: 100%;
   margin-left: 12px;
   font-size: 18px;
   font-family: "Open Sans",
-  sans-serif;
+    sans-serif;
   border: none;
   outline: 0;
   background: none;
-  }
-  #answer-box {
+}
+#answer-box {
   max-width: 700px;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding-bottom: 40px;
-  }
-  .wine-entry {
+}
+.wine-entry {
   background: #fff;
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0
-  4px
-  14px
-  rgba(
-  0,
-  0,
-  0,
-  0.07
-  );
+    4px
+    14px
+    rgba(
+      0,
+      0,
+      0,
+      0.07
+    );
   transition: transform
-  0.2s
-  ease,
-  box-shadow
-  0.2s
-  ease;
-  border: 1px solid #eee;
-  }
-  .wine-entry:hover {
+      0.2s
+      ease,
+    box-shadow
+      0.2s
+      ease;
+  border: 1px
+    solid
+    #eee;
+}
+.wine-entry:hover {
   transform: translateY(
-  -4px
+    -4px
   );
   box-shadow: 0
-  8px
-  20px
-  rgba(
-  0,
-  0,
-  0,
-  0.1
-  );
-  }
-  .wine-name {
+    8px
+    20px
+    rgba(
+      0,
+      0,
+      0,
+      0.1
+    );
+}
+.wine-name {
   font-family: "Kanit",
-  sans-serif;
+    sans-serif;
   font-size: 26px;
   color: #6e1e14;
   margin-bottom: 12px;
   margin-top: 0;
-  }
-  .wine-name a.wine-link {
+}
+.wine-name
+  a.wine-link {
   text-decoration: none;
   color: inherit;
-  transition: color 0.2s ease;
-  }
-  .wine-name a.wine-link:hover,
-  .wine-name a.wine-link:focus {
+  transition: color
+    0.2s
+    ease;
+}
+.wine-name
+  a.wine-link:hover,
+.wine-name
+  a.wine-link:focus {
   text-decoration: underline;
   color: #a43124;
   outline: none;
-  }
-  .wine-review {
+}
+.wine-review {
   font-family: "Montserrat",
-  sans-serif;
+    sans-serif;
   font-size: 16px;
   margin-bottom: 10px;
   line-height: 1.6;
   color: #333;
-  }
-  .wine-rating,
-  .wine-variety,
-  .wine-similarity,
-  .wine-location {
+}
+.wine-rating,
+.wine-variety,
+.wine-similarity,
+.wine-location,
+.wine-tags {
   font-size: 14px;
   color: #666;
   margin-top: 4px;
-  }
-  .hero-header {
+}
+.hero-header {
   width: 100%;
   height: 400px;
   background: url("/static/images/vineyard.png")
-  center
-  center/cover
-  no-repeat;
+    center
+    center/cover
+    no-repeat;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  }
-  .hero-header
+}
+.hero-header
   .overlay {
   background-color: rgba(
-  0,
-  0,
-  0,
-  0.4
+    0,
+    0,
+    0,
+    0.4
   );
   width: 100%;
   height: 100%;
@@ -202,27 +210,27 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  }
-  .site-title {
+}
+.site-title {
   font-size: 70px;
   color: #fff;
   font-family: "Kanit",
-  sans-serif;
+    sans-serif;
   margin: 0;
   text-shadow: 2px
-  2px
-  4px
-  rgba(
-  0,
-  0,
-  0,
-  0.4
-  );
-  }
-  .site-subtitle {
+    2px
+    4px
+    rgba(
+      0,
+      0,
+      0,
+      0.4
+    );
+}
+.site-subtitle {
   font-size: 22px;
   font-family: "Montserrat",
-  sans-serif;
+    sans-serif;
   color: #eee;
   margin-top: 10px;
-  }
+}

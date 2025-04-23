@@ -27,7 +27,7 @@
 <script>
     let debounceTimer;
 
-    function wineTemplate(name, review, rating, variety, similarity, location) {
+    function wineTemplate(name, review, rating, variety, similarity, location, tags) {
 
         const hasRating = rating !== null && rating !== undefined && rating !== '';
         const hasVariety = variety !== null && variety !== undefined && variety !== '';
@@ -49,9 +49,10 @@
                     <p class="wine-review">${review || 'No review available.'}</p>
 
                     ${hasRating ? `<p class="wine-rating">Rating: ${rating}</p>` : ''}
-                    ${hasVariety ? `<p class="wine-variety">Variety: ${variety}</p>` : ''}
-                    ${hasLocation ? `<p class="wine-location">Location: ${location}</p>` : ''}
+                    ${hasVariety ? `<p class="wine-variety">Variety: ${variety}</p>` : `<p class="wine-variety">Variety: Unlisted</p>`}
+                    ${hasLocation ? `<p class="wine-location">Location: ${location}</p>` : `<p class="wine-location">Location: Unlisted</p>`}
                     ${hasSimilarity ? `<p class="wine-similarity">Similarity Score: ${parseFloat(similarity).toFixed(3)}</p>` : ''}
+                        ${tags && tags.length > 0 ? `<p class="wine-tags">Tags: ${tags.join(', ')}</p>` : ''}
                 </div>`;
     }
 
@@ -94,7 +95,8 @@
                                 row["Rating"],
                                 row["Variety"],
                                 row["Similarity"],
-                                row["Location"]
+                                row["Location"],
+                            row["Tags"]
                             );
                             const template = document.createElement('template');
                             template.innerHTML = wineEntryHtml.trim();

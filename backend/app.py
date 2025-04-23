@@ -27,7 +27,28 @@ with open(json_file_path, 'r') as file:
     wines_df = pd.DataFrame(data)
     documents = [(x['Wine Name'], x['Variety'], x['Review'], x['Rating'], x['Location'])
                  for x in data if x['Review'] is not None and len(x['Review']) > 20]
-    vectorizer = TfidfVectorizer(stop_words = 'english', max_df = .7, min_df = 1)
+    
+    extra_stop_words = ["day", "time", "i", "want", "wine", "wines", "red", "white", "rosé", "rose",
+    "bottle", "bottles", "glass", "drink", "drinking",
+    "color", "aroma", "flavor", "flavors", "nose", "palate",
+    "finish", "taste", "tastes", "tasting", "tasted",
+    "vintage", "year", "2020", "2021", "2022", "2023", "2024", "2025",
+    "note", "notes", "showing", "shows", "opens", "opened", "open",
+    "just", "really", "quite", "bit", "little", "nice", "good", "great", "excellent",
+    "soft", "smooth", "rich", "lovely", "beautiful", "delicious",
+    "medium", "light", "full", "bodied", "body",
+    "dry", "sweet", "high", "low", "balance", "balanced",
+    "needs", "should", "can", "will", "could", "would",
+    "decant", "decanted", "hour", "hours", "minutes",
+    "serve", "served", "serving", "pair", "paired", "pairing",
+    "value", "price", "point", "qpr",
+    "drinkable", "drank", "going", "still", "even", "yet", "right", "best",
+    "young", "aged", "aging", "age", "open",
+    "le", "la", "une", "avec", "et", "en", "est", "og", "av", "ve",
+    "show", "shows", "showing", "expresses", "expressive",
+    "domain", "vineyard", "producer", "estate"]
+    extra_stop_words = list(text.ENGLISH_STOP_WORDS.union(extra_stop_words))
+    vectorizer = TfidfVectorizer(stop_words = extra_stop_words, max_df = .7, min_df = 1)
     td_matrix = vectorizer.fit_transform([x[2] for x in documents if x[2] is not None])
     u, s, v_trans = svds(td_matrix, k=100)
 
@@ -59,6 +80,49 @@ with open(json_file_path, 'r') as file:
     location_map = {}
     with open(os.path.join(current_directory, 'location_dict_deduped.json'), 'r') as file:
         location_map = json.load(file)
+        
+    dimension_labels = {
+        0: ["Fruity", "Soft", "Sweet-Spiced", "Mature"],
+        1: ["Structured", "Fruity", "Elegant"],
+        2: ["Earthy", "Spicy", "Bright"],
+        3: ["Deep", "Complex", "Mineral"],
+        4: ["Aromatic", "Fresh", "Balanced"],
+        5: ["Fruity", "Mineral", "Intense"],
+        6: ["Fresh", "Crisp", "Balanced"],
+        7: ["Juicy", "Silky", "Intense"],
+        8: ["Bright", "Fruity", "Acidic"],
+        9: ["Complex", "Mature", "Effervescent"],
+        10: ["Mature", "Leather", "Tobacco"],
+        11: ["Clean", "Oak-influenced", "Elegant"],
+        12: ["Spicy", "Berry-filled", "Powerful"],
+        13: ["Ripe", "Peppery", "Alcoholic"],
+        14: ["Aromatic", "Spicy", "Bright"],
+        15: ["Juicy", "Spicy", "Balanced"],
+        16: ["Balanced", "Earthy", "Fruity"],
+        17: ["Fruity", "Earthy", "Savory"],
+        18: ["Herbaceous", "Spicy", "Bright"],
+        19: ["Aromatic", "Fresh", "Complex"],
+        20: ["Soft", "Spicy", "Clean"],
+        21: ["Tannic", "Cherry", "Mineral"],
+        22: ["Intense", "Citrusy", "Oaky"],
+        23: ["Zesty", "Berry-filled", "Vanilla"],
+        24: ["Integrated", "Herbaceous", "Green"],
+        25: ["Vibrant", "Berry-filled", "Acidic"],
+        26: ["Toasty", "Citrusy", "Vanilla"],
+        27: ["Layered", "Tannic", "Deep"],
+        28: ["Aged", "Oak", "Vanilla"],
+        29: ["Savory", "Spicy", "Mineral"],
+        30: ["Mellow", "Fruity", "Cedar"],
+        31: ["Stylish", "Dark Fruity", "Blended"],
+        32: ["Complex", "Herbaceous", "Dry"],
+        33: ["Full-bodied", "Tannic", "Structured"],
+        34: ["Tart", "Chocolatey", "Dark Fruity"],
+        35: ["Tart", "Berries", "Sour"],
+        36: ["Warm", "Fruity", "Earthy"],
+        37: ["Juicy", "Dark Fruity", "Spicy"],
+        38: ["Dark", "Tobacco", "Deep"],
+        39: ["Exotic", "Unique", "Local"]
+    }
     
 
 
@@ -116,6 +180,9 @@ def closest_wines_to_query(query_vec_in, k = 5, variety_filter=None, year_filter
         wine_data = data[i]
 
         title, variety, review, rating, location = documents[i][:5]
+        most_matching_dimensions = np.argsort(docs_compressed_normed[i] * query_vec_in, axis=0)[-3:]
+        tags = [dimension_labels[dim] for dim in most_matching_dimensions]
+        tags = list(set([item for sublist in tags for item in sublist]))
         designation = wine_data.get("designation", [""])[0] if isinstance(wine_data.get("designation"), list) else ""
         # FILTERS
         if variety_filter and (not variety or variety_filter.lower() not in variety.lower()):
@@ -126,7 +193,7 @@ def closest_wines_to_query(query_vec_in, k = 5, variety_filter=None, year_filter
             continue
         if location_filter and (not location or (location.lower() not in location_filter.lower() and all(location.lower() not in loc.lower() for loc in location_map.get(location_filter, [])))):
             continue
-        res.append((title, variety, review, rating, location, sims[i]))
+        res.append((title, variety, review, rating, location, sims[i], tags))
         added += 1
         if added == k:
             break
@@ -219,8 +286,8 @@ def json_search(query):
         columns_present = [col for col in columns_to_use if col in matches.columns]
         matches = matches[columns_present]
     
-    matches = pd.DataFrame(matches, columns=['Wine Name', 'Variety', 'Review', 'Rating', 'Location', 'Similarity'])
-    matches_filtered = matches[['Wine Name', 'Review', 'Rating', 'Variety', 'Location', 'Similarity']]
+    matches = pd.DataFrame(matches, columns=['Wine Name', 'Variety', 'Review', 'Rating', 'Location', 'Similarity', 'Tags'])
+    matches_filtered = matches[['Wine Name', 'Review', 'Rating', 'Variety', 'Location', 'Similarity', 'Tags']]
 
     
     return matches_filtered.to_json(orient='records')
