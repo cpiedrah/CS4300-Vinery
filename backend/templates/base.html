@@ -19,49 +19,99 @@
                 </div>
             </div>
         </header>
-    
-        <div class="full-body-container">
-            <div id="answer-box"></div>
-        </div>
-    
+<div class="full-body-container">
+        <div id="answer-box"></div>
+    </div>
 
-    <script>
-        function wineTemplate(name, review, rating, variety, similarity, location) {
-            return `<div class="wine-entry">
-                        <h3 class="wine-name">${name}</h3>
-                        <p class="wine-review">${review}</p>
-                        <p class="wine-rating">Rating: ${rating}</p>
-                        ${variety ? `<p class="wine-variety">Variety: ${variety}</p>` : ''}
-                        ${location ? `<p class="wine-location">Location: ${location}</p>` : ''}
-                        ${similarity ? `<p class="wine-similarity">Similarity Score: ${similarity}</p>` : ''}
-                    </div>`;
+
+<script>
+    let debounceTimer;
+
+    function wineTemplate(name, review, rating, variety, similarity, location) {
+
+        const hasRating = rating !== null && rating !== undefined && rating !== '';
+        const hasVariety = variety !== null && variety !== undefined && variety !== '';
+        const hasLocation = location !== null && location !== undefined && location !== '';
+        const hasSimilarity = similarity !== null && similarity !== undefined;
+
+        let nameElement = 'Unnamed Wine'; 
+        if (name) {
+            const encodedName = encodeURIComponent(name);
+            const searchUrl = `https://www.wine-searcher.com/find/${encodedName}`;
+
+            nameElement = `<a href="${searchUrl}" target="_blank" rel="noopener noreferrer" class="wine-link">${name}</a>`;
+            
         }
 
-        function sendFocus() {
-            document.getElementById('filter-text-val').focus();
-        }
+        return `<div class="wine-entry">
+                    <h3 class="wine-name">${nameElement}</h3>
 
-        function filterText() {
-            document.getElementById("answer-box").innerHTML = "";
-            const query = document.getElementById("filter-text-val").value;
+                    <p class="wine-review">${review || 'No review available.'}</p>
+
+                    ${hasRating ? `<p class="wine-rating">Rating: ${rating}</p>` : ''}
+                    ${hasVariety ? `<p class="wine-variety">Variety: ${variety}</p>` : ''}
+                    ${hasLocation ? `<p class="wine-location">Location: ${location}</p>` : ''}
+                    ${hasSimilarity ? `<p class="wine-similarity">Similarity Score: ${parseFloat(similarity).toFixed(3)}</p>` : ''}
+                </div>`;
+    }
+
+    function sendFocus() {
+        document.getElementById('filter-text-val').focus();
+    }
+
+    function filterText() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+            const answerBox = document.getElementById("answer-box");
+            answerBox.innerHTML = "";
+            const query = document.getElementById("filter-text-val").value.trim();
+
+            if (query.length > 0) {
+                answerBox.innerHTML = '<p class="loading-message">Searching...</p>';
+            } else {
+                return;
+            }
+
             fetch("/search?" + new URLSearchParams({ query: query }).toString())
-                .then(response => response.json())
-                .then(data => {
-                    data.forEach(row => {
-                        const tempDiv = document.createElement("div");
-                        tempDiv.innerHTML = wineTemplate(
-                            row["Wine Name"],
-                            row["Review"],
-                            row["Rating"],
-                            row["Variety"],
-                            row["Similarity"],
-                            row["Location"]
-                        );
-                        document.getElementById("answer-box").appendChild(tempDiv);
-                    });
+                .then(response => {
+                    if (!response.ok) {
+                            return response.text().then(text => {
+                            throw new Error(`HTTP error! status: ${response.status}, message: ${text}`);
+                        });
+                    }
+                    return response.json();
                 })
-                .catch(error => console.error('Error fetching data:', error));
-        }
-    </script>
+                .then(data => {
+                    answerBox.innerHTML = "";
+                    if (!data || data.length === 0) {
+                        answerBox.innerHTML = '<p class="no-results-message">No wines found matching your search.</p>';
+                    } else {
+                        const fragment = document.createDocumentFragment();
+                        data.forEach(row => {
+                            const wineEntryHtml = wineTemplate(
+                                row["Wine Name"],
+                                row["Review"],
+                                row["Rating"],
+                                row["Variety"],
+                                row["Similarity"],
+                                row["Location"]
+                            );
+                            const template = document.createElement('template');
+                            template.innerHTML = wineEntryHtml.trim();
+                            if (template.content.firstChild) {
+                                fragment.appendChild(template.content.firstChild);
+                            }
+                        });
+                        answerBox.appendChild(fragment);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    answerBox.innerHTML = `<p class="error-message">Sorry, an error occurred while searching. (${error.message})</p>`;
+                });
+        }, 200);
+    }
+    
+</script>
 </body>
 </html>
