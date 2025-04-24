@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 from flask_cors import CORS
 from helpers.MySQLDatabaseHandler import MySQLDatabaseHandler
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.feature_extraction import text
+from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 from sklearn.preprocessing import normalize
 from scipy.sparse.linalg import svds
 import pandas as pd
@@ -20,6 +20,7 @@ current_directory = os.path.dirname(os.path.abspath(__file__))
 # Specify the path to the JSON file relative to the current script
 # json_file_path = os.path.join(current_directory, 'cellartracker_wine_reviews_with_rating_40pages.json')
 json_file_path = os.path.join(current_directory, 'cellartracker_wine_reviews.json')
+location_file_path = os.path.join(current_directory, 'location_dict_deduped.json')
 
 # Assuming your JSON data is stored in a file named 'init.json'
 with open(json_file_path, 'r') as file:
@@ -28,26 +29,8 @@ with open(json_file_path, 'r') as file:
     documents = [(x['Wine Name'], x['Variety'], x['Review'], x['Rating'], x['Location'])
                  for x in data if x['Review'] is not None and len(x['Review']) > 20]
     
-    extra_stop_words = ["day", "time", "i", "want", "wine", "wines", "red", "white", "rosé", "rose",
-    "bottle", "bottles", "glass", "drink", "drinking",
-    "color", "aroma", "flavor", "flavors", "nose", "palate",
-    "finish", "taste", "tastes", "tasting", "tasted",
-    "vintage", "year", "2020", "2021", "2022", "2023", "2024", "2025",
-    "note", "notes", "showing", "shows", "opens", "opened", "open",
-    "just", "really", "quite", "bit", "little", "nice", "good", "great", "excellent",
-    "soft", "smooth", "rich", "lovely", "beautiful", "delicious",
-    "medium", "light", "full", "bodied", "body",
-    "dry", "sweet", "high", "low", "balance", "balanced",
-    "needs", "should", "can", "will", "could", "would",
-    "decant", "decanted", "hour", "hours", "minutes",
-    "serve", "served", "serving", "pair", "paired", "pairing",
-    "value", "price", "point", "qpr",
-    "drinkable", "drank", "going", "still", "even", "yet", "right", "best",
-    "young", "aged", "aging", "age", "open",
-    "le", "la", "une", "avec", "et", "en", "est", "og", "av", "ve",
-    "show", "shows", "showing", "expresses", "expressive",
-    "domain", "vineyard", "producer", "estate"]
-    extra_stop_words = list(text.ENGLISH_STOP_WORDS.union(extra_stop_words))
+    extra_stop_words = ["day", "time", "i", "want", "wine", "wines", "red", "white", "rosé", "rose", "bottle", "bottles", "glass", "drink", "drinking", "color", "aroma", "flavor", "flavors", "nose", "palate", "finish", "taste", "tastes", "tasting", "tasted", "vintage", "year", "2020", "2021", "2022", "2023", "2024", "2025", "note", "notes", "showing", "shows", "opens", "opened", "open", "just", "really", "quite", "bit", "little", "nice", "good", "great", "excellent", "soft", "smooth", "rich", "lovely", "beautiful", "delicious", "medium", "light", "full", "bodied", "body", "dry", "sweet", "high", "low", "balance", "balanced", "needs", "should", "can", "will", "could", "would", "decant", "decanted", "hour", "hours", "minutes", "serve", "served", "serving", "pair", "paired", "pairing", "value", "price", "point", "qpr", "drinkable", "drank", "going", "still", "even", "yet", "right", "best", "young", "aged", "aging", "age", "open", "le", "la", "une", "avec", "et", "en", "est", "og", "av", "ve", "show", "shows", "showing", "expresses", "expressive", "domain", "vineyard", "producer", "estate"]
+    extra_stop_words = list(ENGLISH_STOP_WORDS.union(extra_stop_words))
     vectorizer = TfidfVectorizer(stop_words = extra_stop_words, max_df = .7, min_df = 1)
     td_matrix = vectorizer.fit_transform([x[2] for x in documents if x[2] is not None])
     u, s, v_trans = svds(td_matrix, k=100)
@@ -77,9 +60,6 @@ with open(json_file_path, 'r') as file:
     ratings = ratings / 100
 
     # load location map from location_dict_deduped.json
-    location_map = {}
-    with open(os.path.join(current_directory, 'location_dict_deduped.json'), 'r') as file:
-        location_map = json.load(file)
         
     dimension_labels = {
         0: ["Fruity", "Soft", "Sweet-Spiced", "Mature"],
@@ -124,6 +104,10 @@ with open(json_file_path, 'r') as file:
         39: ["Exotic", "Unique", "Local"]
     }
     
+
+with open(location_file_path, 'r') as file:
+    location_map = json.load(file)[0]
+
 
 
 app = Flask(__name__)
