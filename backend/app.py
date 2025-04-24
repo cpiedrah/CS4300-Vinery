@@ -25,6 +25,8 @@ location_file_path = os.path.join(current_directory, 'location_dict_deduped.json
 # Assuming your JSON data is stored in a file named 'init.json'
 with open(json_file_path, 'r') as file:
     data = json.load(file)
+    location_map = data['locations'][0]
+    data = data["reviews"]
     wines_df = pd.DataFrame(data)
     documents = [(x['Wine Name'], x['Variety'], x['Review'], x['Rating'], x['Location'])
                  for x in data if x['Review'] is not None and len(x['Review']) > 20]
@@ -105,8 +107,6 @@ with open(json_file_path, 'r') as file:
     }
     
 
-with open(location_file_path, 'r') as file:
-    location_map = json.load(file)[0]
 
 
 
