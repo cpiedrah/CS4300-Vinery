@@ -9,6 +9,7 @@ from sklearn.preprocessing import normalize
 from scipy.sparse.linalg import svds
 import pandas as pd
 import numpy as np
+import gc
 
 # ROOT_PATH for linking with all your files. 
 # Feel free to use a config.py or settings.py with a global export variable
@@ -33,7 +34,7 @@ with open(json_file_path, 'r') as file:
     
     extra_stop_words = ["day", "time", "i", "want", "wine", "wines", "red", "white", "rosé", "rose", "bottle", "bottles", "glass", "drink", "drinking", "color", "aroma", "flavor", "flavors", "nose", "palate", "finish", "taste", "tastes", "tasting", "tasted", "vintage", "year", "2020", "2021", "2022", "2023", "2024", "2025", "note", "notes", "showing", "shows", "opens", "opened", "open", "just", "really", "quite", "bit", "little", "nice", "good", "great", "excellent", "soft", "smooth", "rich", "lovely", "beautiful", "delicious", "medium", "light", "full", "bodied", "body", "dry", "sweet", "high", "low", "balance", "balanced", "needs", "should", "can", "will", "could", "would", "decant", "decanted", "hour", "hours", "minutes", "serve", "served", "serving", "pair", "paired", "pairing", "value", "price", "point", "qpr", "drinkable", "drank", "going", "still", "even", "yet", "right", "best", "young", "aged", "aging", "age", "open", "le", "la", "une", "avec", "et", "en", "est", "og", "av", "ve", "show", "shows", "showing", "expresses", "expressive", "domain", "vineyard", "producer", "estate"]
     extra_stop_words = list(ENGLISH_STOP_WORDS.union(extra_stop_words))
-    vectorizer = TfidfVectorizer(stop_words = extra_stop_words, max_df = .7, min_df = 1)
+    vectorizer = TfidfVectorizer(stop_words = extra_stop_words, max_df = .6, min_df = 75)
     td_matrix = vectorizer.fit_transform([x[2] for x in documents if x[2] is not None])
     u, s, v_trans = svds(td_matrix, k=100)
 
@@ -46,6 +47,8 @@ with open(json_file_path, 'r') as file:
     words_compressed_normed = normalize(words_compressed, axis = 1)
 
     td_matrix_np = td_matrix.transpose().toarray()
+    del td_matrix
+    gc.collect()
     td_matrix_np = normalize(td_matrix_np)
 
     docs_compressed_normed = normalize(docs_compressed)
@@ -53,13 +56,6 @@ with open(json_file_path, 'r') as file:
     # Get the unique varieties from the DataFrame without None values
     unique_varieties = wines_df['Variety'].dropna().unique()
 
-
-    ratings = np.array([x[3].split(' ')[-2] for x in documents])
-
-    # if the rating is not a number, set it to 0
-    ratings = [float(r) if not ':' in r else 0 for r in ratings]
-    ratings = np.array(ratings)
-    ratings = ratings / 100
 
     # load location map from location_dict_deduped.json
         
@@ -105,7 +101,30 @@ with open(json_file_path, 'r') as file:
         38: ["Dark", "Tobacco", "Deep"],
         39: ["Exotic", "Unique", "Local"]
     }
-    
+
+    del extra_stop_words
+    del docs_compressed
+    del words_compressed
+    gc.collect()
+
+    # # print how many bytes dimension_labels is using
+    # print(f"Dimension labels size: {dimension_labels.__sizeof__()} bytes")
+    # # now words_compressed_normed
+    # print(f"Words compressed size: {words_compressed_normed.__sizeof__()} bytes")
+    # # now docs_compressed_normed
+    # # print(f"Docs compressed size: {docs_compressed_normed.__sizeof__()} bytes")
+    # # now td_matrix_np
+    # print(f"TD matrix size: {td_matrix_np.__sizeof__()} bytes")
+    # # now wines_df
+    # print(f"Wines df size: {wines_df.__sizeof__()} bytes")
+    # # now location_map
+    # print(f"Location map size: {location_map.__sizeof__()} bytes")
+    # # now unique_varieties
+    # print(f"Unique varieties size: {unique_varieties.__sizeof__()} bytes")
+    # # now data
+    # print(f"Data size: {data.__sizeof__()} bytes")
+    # # now documents
+    # print(f"Documents size: {documents.__sizeof__()} bytes")
 
 
 
@@ -127,6 +146,12 @@ def closest_wines(wine_index_in, wine_repr_in, k = 5):
 
 def closest_wines_to_query(query_vec_in, k = 5, variety_filter=None, year_filter=None, color_filter=None, location_filter=None):
     sims = docs_compressed_normed.dot(query_vec_in)
+    ratings = np.array([x[3].split(' ')[-2] for x in documents])
+
+    # if the rating is not a number, set it to 0
+    ratings = [float(r) if not ':' in r else 0 for r in ratings]
+    ratings = np.array(ratings)
+    ratings = ratings / 100
     sims = (sims + ratings) / 2
     asort = np.argsort(-sims)
     
@@ -252,7 +277,7 @@ def json_search(query):
         # Get tf-idf representation of the query
         query_tfidf = vectorizer.transform([query_lower]).toarray()
         # Normalize the query vector
-        query_vec = normalize(np.dot(query_tfidf, words_compressed)).squeeze()
+        query_vec = normalize(np.dot(query_tfidf, words_compressed_normed)).squeeze()
         # Find the closest wines to the query vector
         matches = closest_wines_to_query(
         query_vec,
